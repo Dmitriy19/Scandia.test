@@ -1,0 +1,29 @@
+{
+  "name": "webpack_app",
+  "version": "1.0.0",
+  "description": "Sample webpack app",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack-dev-server --entry ./js/app.js --output-filename ./dist/bundle.js",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bable-loader": "0.0.1-security",
+    "font-loader": "^0.1.2",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.7.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.16.1",
+    "webpack": "^3.10.0"
+  }
+}

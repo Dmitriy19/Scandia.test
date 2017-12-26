@@ -1,0 +1,308 @@
+@import "fonts.css"
+@import "bootstrap.css"
+@import "hamburger.css"
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font: inherit
+  font-size: 100%
+  vertical-align: baseline
+
+a
+  text-decoration: none
+
+html
+  line-height: 1
+
+
+ol, ul
+  list-style: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+html
+  height: 100%
+
+body
+  height: 100%
+
+
+caption, th, td
+  text-align: left
+  font-weight: normal
+  vertical-align: middle
+
+.container
+  height: 100%
+
+q, blockquote
+  quotes: none
+
+q:before, q:after, blockquote:before, blockquote:after
+  content: ""
+  content: none
+
+a img
+  border: none
+
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary
+  display: block
+*
+
+
+.main-picture .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6
+  height: 100%
+
+//.col-xs-12, .col-xs-11, .col-xs-10, .col-xs-9, .col-xs-8, .col-xs-7, .col-xs-5,
+//.col-xs-4, .col-xs-3, .col-xs-2, .col-xs-1, .col-sm-12, .cosm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7,  .col-sm-5,
+//.col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1, .comd-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7,  .col-md-5,
+//.col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-lg-12, .col-lg-11, .col-lg-10, .col-lg-9, .col-lg-8, .col-lg-7,  .col-lg-5,
+//.col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1
+
+
+.row
+  height: 100%
+
+
+  //   fonts
+// OpenSansBold
+// droidserif-bold
+// droidserif-regular
+// open-sans-light
+// open-sans-regular
+// open-sans-semibold
+
+
+header
+  position: absolute
+  min-height: 100px
+  width: 100%
+  z-index: 22
+
+
+.menu-button
+
+  height: 28px
+  width: 30px
+  margin-top: 50px
+  margin-right: 40px
+  float: right
+
+
+  &:hover
+    background-position: -51px 0px
+
+
+
+
+
+
+.main-picture
+  width: 100%
+  height: 100%
+  position: relative
+  background-image: url("../img/Main-picture.jpg")
+  background-repeat: no-repeat
+  background-position: top center
+  background-size: cover
+  //min-height: 1082px
+
+//
+//  position: relative
+//  min-height: 668px
+
+
+
+  //min-height: 1082px
+
+.main-picture .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+.main-logo-div
+  min-width: 360px
+
+
+  //background: #ccf1ff
+
+.logo
+  position: relative
+  background-image: url("../img/logo.png")
+  background-repeat: no-repeat
+  background-size: auto 60px
+  width: 100%
+  height: 80px
+
+.logo-text
+  min-width: 280px
+  margin-top: 40px
+  position: relative
+  width: 100%
+  text-align: left
+  font-family: droidserif-regular
+  font-size: 40px
+  line-height: 56px
+  span
+    color: white
+
+
+
+
+// download-free-block
+
+.download-free-block
+  min-height: 32px
+  padding: 10px
+  float: right
+
+.main-picture .download-free-block-position
+  align-items: flex-end
+  justify-content: flex-end
+
+
+.main-download-block
+  width: 100%
+  color: white
+
+
+.icon-file-pdf
+  float: left
+  height: 66px
+  width: 60px
+  background-image: url("../img/icon-file-pdf.png")
+  background-repeat: no-repeat
+  background-position: center center
+
+
+.download-caption
+  font-size: 24px
+  overflow: hidden
+  margin-left: 80px
+  line-height: 34px
+
+
+
+.download-description-text
+  padding: 5px
+  margin: 26px 0px
+  width: 300px
+  color: #a3a5ab
+  font-size: 14px
+  font-family: open-sans-regular
+  line-height: 20px
+
+.button-guide a
+  display: block
+  height: 50px
+  width: 190px
+  background: #ffdb18
+  border-radius: 25px
+  font-size: 14px
+  text-align: center
+  font-family: droidserif-bold
+  line-height: 50px
+  color: black
+  -webkit-transition: all .1s ease-in-out
+  -o-transition: all .1s ease-in-out
+  transition: all .1s ease-in-out
+  &:hover
+    text-decoration: none
+    background: #e9c500
+
+.scroll-button-container
+  position: relative
+  width: 100%
+  height: 100%
+  background: pink
+
+.scroll-button
+  width: 40px
+  margin: 0 auto
+  background: red
+
+
+
+
+
+
+.font
+  text-align: center
+
+
+
+
+
+
+.picture-bar-global
+  padding: 1px
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  min-height: 480px
+  color:
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+
+
+
+
+.picture-bar-1
+  background-image: url("../img/picture-bar-1.jpg")
+.picture-bar-2
+  background-image: url("../img/picture-bar-2.jpg")
+.picture-bar-3
+  background-image: url("../img/picture-bar-3.jpg")
+
+.clients-block
+  width: 100%
+  min-height: 680px
+  background-color: #a3a5ab
+
+.finding-great-block
+  background-image: url("../img/finding-great.jpg")
+
+.data-driven
+  margin: 40px auto
+  width: 500px
+  color: #ffffff
+  text-align: center
+  font-size: 36px
+  font-family: droidserif-regular
+
+.description-data
+  margin: 60px auto
+  color: #cbcbcb
+  width: 700px
+  text-align: center
+  font-size: 16px
+  line-height: 24px
+  font-family: open-sans-light
+
+
+
+
+
+
