@@ -1,7 +1,8 @@
 @import "fonts.css"
 @import "bootstrap.css"
 @import "hamburger.css"
-
+@import "scroll-down.css"
+@import "winston.css"
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -25,6 +26,11 @@ time, mark, audio, video
 
 a
   text-decoration: none
+  cursor: pointer
+
+a:hover
+  text-decoration: none
+  cursor: pointer
 
 html
   line-height: 1
@@ -39,6 +45,7 @@ table
 
 html
   height: 100%
+  background-color: #f4fffd
 
 body
   height: 100%
@@ -49,7 +56,7 @@ caption, th, td
   font-weight: normal
   vertical-align: middle
 
-.container
+.main-picture .container
   height: 100%
 
 q, blockquote
@@ -78,7 +85,7 @@ article, aside, details, figcaption, figure, footer, header, main, menu, nav, se
 //.col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1
 
 
-.row
+.main-picture .row
   height: 100%
 
 
@@ -134,7 +141,7 @@ header
   //min-height: 1082px
 
 .main-picture .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6
-  height: 100%
+  height: 92%
   display: flex
   justify-content: center
   align-items: center
@@ -180,7 +187,7 @@ header
   justify-content: flex-end
 
 
-.main-download-block
+.main-download-block a
   width: 100%
   color: white
 
@@ -195,6 +202,7 @@ header
 
 
 .download-caption
+  max-width: 240px
   font-size: 24px
   overflow: hidden
   margin-left: 80px
@@ -233,7 +241,7 @@ header
   position: relative
   width: 100%
   height: 100%
-  background: pink
+  margin-top: 26px
 
 .scroll-button
   width: 40px
@@ -292,6 +300,12 @@ header
   font-size: 36px
   font-family: droidserif-regular
 
+.data-driven h1
+  -webkit-transition:  ease-out 0.3s
+  -moz-transition:  ease-out 0.3s
+  -o-transition:  ease-out 0.3s
+  transition:  ease-out 0.3s
+
 .description-data
   margin: 60px auto
   color: #cbcbcb
@@ -301,6 +315,18 @@ header
   line-height: 24px
   font-family: open-sans-light
 
+  //
+//picture-bar-hover (section)
+  //
+.picture-bar-hover:hover
+  section
+    margin-bottom: 200px
+  .picture-bar-hover-block
+    -moz-transform: rotate(-45deg)  /* Firefox */
+    -o-transform: rotate(-45deg)  /* Opera */
+    -webkit-transform: rotate(-45deg)  /* Safari y Chrome */
+  .data-driven h1
+    color: #fdd918
 
 
 

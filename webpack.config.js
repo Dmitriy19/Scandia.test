@@ -11,13 +11,16 @@ const config = {
     },
 
     module:{
+
         rules: [
+
 
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: [ 'babel-loader' ]
             },
+
 
             /*{
              test: /(\.css|\.sass)$/,
@@ -119,13 +122,17 @@ const config = {
 
         ]
     },
-    /*plugins: [
-        new ExtractTextPlugin('screen.css')
+    plugins: [
+     new webpack.ProvidePlugin({
+     $: 'jquery',
+     jQuery: 'jquery'
+     }),
+        //new ExtractTextPlugin('screen.css')
         //if you want to pass in options, you can do so:
         //new ExtractTextPlugin({
         //  filename: 'screen.css'
         //})
-    ]*/
+    ]
 };
 
 module.exports = config;
