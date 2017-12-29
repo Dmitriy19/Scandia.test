@@ -3,7 +3,7 @@
 @import "hamburger.css"
 @import "scroll-down.css"
 @import "winston.css"
-
+@import "wobble-vertical.css"
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -130,6 +130,7 @@ header
   background-repeat: no-repeat
   background-position: top center
   background-size: cover
+  padding: 60px
   //min-height: 1082px
 
 //
@@ -141,7 +142,7 @@ header
   //min-height: 1082px
 
 .main-picture .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6
-  height: 92%
+  height: 100%
   display: flex
   justify-content: center
   align-items: center
@@ -186,6 +187,9 @@ header
   align-items: flex-end
   justify-content: flex-end
 
+.main-download-block
+  padding-top: 5px
+  padding-bottom: 5px
 
 .main-download-block a
   width: 100%
@@ -205,8 +209,16 @@ header
   max-width: 240px
   font-size: 24px
   overflow: hidden
-  margin-left: 80px
   line-height: 34px
+  padding-left: 10px
+
+.icon-file-pdf
+  &hover
+    transform: translate(0px, -50px)
+
+
+.download-caption span
+  color: #ffdb18
 
 
 
@@ -218,6 +230,9 @@ header
   font-size: 14px
   font-family: open-sans-regular
   line-height: 20px
+
+.button-guide
+  padding: 5px
 
 .button-guide a
   display: block
@@ -241,12 +256,11 @@ header
   position: relative
   width: 100%
   height: 100%
-  margin-top: 26px
+  //margin-top: 26px
 
 .scroll-button
   width: 40px
   margin: 0 auto
-  background: red
 
 
 
@@ -320,7 +334,8 @@ header
   //
 .picture-bar-hover:hover
   section
-    margin-bottom: 200px
+    transform: translate(0px, -50px)
+    //margin-bottom: 200px
   .picture-bar-hover-block
     -moz-transform: rotate(-45deg)  /* Firefox */
     -o-transform: rotate(-45deg)  /* Opera */
