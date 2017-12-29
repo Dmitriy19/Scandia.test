@@ -1,0 +1,53 @@
+.main{
+	position: relative;
+	background-color: pink;
+	width: 300px;
+	height: 150px;
+	margin: 300px auto
+
+}
+
+
+
+
+.main::before {
+	/*content: "";
+	display: inline-block;
+	height: 50px;
+	width: 150px;
+	background-color: red;
+	position: absolute;
+	top: 150px;
+	left: 150px;*/
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(hover-baner.png) no-repeat center center;
+    background-size: 100% 100%;
+    content: '';
+    -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+    transition: opacity 0.45s, transform 0.45s;
+    -webkit-transform: rotate3d(0,0,1,45deg);
+    transform: rotate3d(0,0,1,25deg);
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+
+}
+.main::before {
+    opacity: 0.7;
+    -webkit-transform: rotate3d(0,0,1,20deg);
+    transform: rotate3d(0,0,1,20deg);}
+
+.main::before:hover{
+	transform: rotate3d(0,0,1,45deg);
+}
+
+/*after:hover {
+	-o-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}*/
