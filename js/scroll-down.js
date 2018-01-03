@@ -1,3 +1,4 @@
+jQuery('#item');
 $('#item');
 $(function() {
     $('.scroll-down').click (function() {

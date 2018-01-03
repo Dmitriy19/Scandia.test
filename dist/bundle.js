@@ -80,6 +80,7 @@ __webpack_require__(2);
 /* 2 */
 /***/ (function(module, exports) {
 
+jQuery('#item');
 $('#item');
 $(function () {
   $('.scroll-down').click(function () {
