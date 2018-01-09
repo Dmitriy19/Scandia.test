@@ -1,8 +1,3 @@
-body {
-    background: #F26451;
-}
-
-
 
 button {
     position: absolute;
@@ -37,7 +32,6 @@ button:hover .button-div:nth-child(3):before {
     width: 2px;
     height: 2px;
     border-radius: 50%;
-    background: #F26451;
 }
 
 button:hover .button-div {

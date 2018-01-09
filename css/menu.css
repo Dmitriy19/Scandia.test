@@ -1,0 +1,134 @@
+
+
+
+
+
+.close-button {
+  cursor: pointer;
+}
+
+#hamburger-open {
+  z-index: 1;
+  position: relative;
+  margin-left: 75%;
+  margin-top: 2%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.spans {
+  width: 100%;
+  height: 10%;
+  background-color: #111820;
+  border-radius: 500px;
+  opacity: 1;
+  transition-property: background-color, transform, opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.white {
+  background-color: #f5f5f5;
+  transition-duration: 0.5s;
+  transition-delay: none;
+}
+
+.spanOneRotate {
+  transform: translateY(9px) rotate(-45deg);
+  transition-property: background-color, transform;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.spanTwoRotate {
+  transform: rotate(45deg);
+  transition-property: background-color, transform;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.spanThreeHide {
+  transition-property: background-color, opacity;
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.modal-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+
+.menuitem {
+  position: relative;
+  font-family: "Karla", sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  color: #a5a5a5;
+  height: 75px;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0;
+}
+
+.menuitem:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 45%;
+  left: -6px;
+  background-color: #111820;
+  height: 1px;
+  z-index: -1;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.menuitem:nth-of-type(1):hover:after {
+  background-color: #ff4338;
+  transform: scaleY(20) translateY(-60%);
+}
+
+.menuitem:nth-of-type(2):hover:after {
+  background-color: #3cd52e;
+  transform: scaleY(20) translateY(-60%);
+}
+
+.menuitem:nth-of-type(3):hover:after {
+  background-color: #00b3e3;
+  transform: scaleY(20) translateY(-60%);
+}
+
+.menuitem:nth-of-type(4):hover:after {
+  background-color: #ff4338;
+  transform: scaleY(20) translateY(-60%);
+}
+
+.menuitem:hover {
+  color: #f5f5f5;
+}
+
+.show {
+  opacity: 1;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 1s;
+}

@@ -4,6 +4,7 @@
 @import "scroll-down.css"
 @import "winston.css"
 @import "wobble-vertical.css"
+//@import "menu.css"
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,6 +25,7 @@ time, mark, audio, video
   font-size: 100%
   vertical-align: baseline
 
+
 a
   text-decoration: none
   cursor: pointer
@@ -31,9 +33,14 @@ a
 a:hover
   text-decoration: none
   cursor: pointer
-
+  
+body
+  height: 100%
+  
+  
 html
   line-height: 1
+  height: 100%
 
 
 ol, ul
@@ -47,8 +54,8 @@ html
   height: 100%
   background-color: #f4fffd
 
-body
-  height: 100%
+
+
 
 
 caption, th, td
@@ -58,6 +65,7 @@ caption, th, td
 
 .main-picture .container
   height: 100%
+  width: 100%
 
 q, blockquote
   quotes: none
@@ -123,17 +131,18 @@ header
 
 
 .main-picture
-  width: 100%
-  height: 100%
   position: relative
+  width: 100%
+  height: 100vh
+  padding: 60px
+  overflow: hidden
   background-image: url("../img/Main-picture.jpg")
   background-repeat: no-repeat
   background-position: top center
   background-size: cover
-  padding: 60px
-  //min-height: 1082px
 
-//
+
+  //min-height: 1082px
 //  position: relative
 //  min-height: 668px
 
@@ -283,15 +292,16 @@ header
 
 
 .picture-bar-global
-  padding: 1px
   position: relative
+  width: 100%
+  min-height: 480px
+  margin-left: auto
+  margin-right: auto
+  padding: 1px
   display: flex
   justify-content: center
   align-items: center
   overflow: hidden
-  width: 100%
-  min-height: 480px
-  color:
   background-repeat: no-repeat
   background-position: center center
   background-size: cover
@@ -324,10 +334,10 @@ header
   font-family: droidserif-regular
 
 .data-driven h1
-  -webkit-transition:  ease-out 0.3s
-  -moz-transition:  ease-out 0.3s
-  -o-transition:  ease-out 0.3s
-  transition:  ease-out 0.3s
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
 
 .description-data
   margin: 60px auto
@@ -339,76 +349,106 @@ header
   font-family: open-sans-light
 
 
+
 .picture-bar-hover:before
   position: absolute
-  top: 5px
   left: 50%
-  width: 100%
-  height: 100%
+  //width: 50%
+  //height: 100%
   overflow: hidden
-  background: url(../img/hover-baner.png) no-repeat center center
-  background-size: 100% 100%
   content: ''
+  width: 0
+  border-bottom: 260px solid #fdd918
+  border-left: 100vh solid transparent
   -webkit-transition: opacity 0.45s, -webkit-transform 0.45s
   transition: opacity 0.45s, transform 0.45s
   -webkit-transform: rotate3d(0,0,1,45deg)
-  transform: rotate3d(0,0,1, 19deg)
+  transform: rotate3d(0,0,1, 45deg)
   -webkit-transform-origin: 0 100%
   transform-origin: 0 100%
   box-sizing: border-box
-  -webkit-transition:  ease-out 0.3s
-  -moz-transition:  ease-out 0.3s
-  -o-transition:  ease-out 0.3s
-  transition:  ease-out 0.3s
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
 
 
-.link-bar a
-  color: white
-  text-transform: uppercase
 
 .link-bar
   position: absolute
-  right: -20px
-  bottom: -130px
+  right: 0
+  bottom: -60px
+  padding: 0 3% 0 0
   display: block
   opacity: 4
   font-size: 14px
   font-family: OpenSansBold
-  -webkit-transition:  ease-out 0.3s
-  -moz-transition:  ease-out 0.3s
-  -o-transition:  ease-out 0.3s
-  transition:  ease-out 0.3s
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
   opacity: 0
 
+.link-bar a
+  color: white
+  text-transform: uppercase
+  float: right
+  opacity: 0
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
 
+.picture-bar-article
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
+
+.picture-bar-article h1
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
+
+.picture-bar-global .container
+  margin: 0
+  padding: 0
 
 
   //
 //picture-bar-hover (section)
   //
 
+
 .picture-bar-hover:hover
-  section
-    transform: translate(0px, -50px)
+  .picture-bar-article
+    transform: translate(0, -50px)
+
   .picture-bar-hover-block
     -moz-transform: rotate(-45deg)  /* Firefox */
     -o-transform: rotate(-45deg)  /* Opera */
     -webkit-transform: rotate(-45deg)  /* Safari y Chrome */
-  .data-driven h1
+
+  .picture-bar-article h1
     color: #fdd918
+
   .picture-bar-hover:before
     transform: rotate3d(0, 0, 1, 14deg)
-    -webkit-transform: rotate3d(0,0,1,14deg)
+    -webkit-transform: rotate3d(0,0,1, 14deg)
     z-index: 9
+
   .link-bar
-    transform: translate(0px, -50px)
+    transform: translate(0px, -85px)
     opacity: 4
 
-.picture-bar-hover:hover.picture-bar-hover:before
-  transform: rotate3d(0, 0, 1, 4deg)
-  -webkit-transform: rotate3d(0,0,1,4deg)
-  opacity: 0.7
+  .link-bar a
+    opacity: 1
 
+.picture-bar-hover:hover.picture-bar-hover:before
+  transform: rotate3d(0, 0, 1, 0deg)
+  -webkit-transform: rotate3d(0,0,1,0deg)
+  opacity: 0.6
 
 figure.effect-winston p
   position: absolute
@@ -424,3 +464,44 @@ figure.effect-winston a
   margin: 0 10px
   color: #5d504f
   font-size: 170%
+
+.plugin-section-main
+  position: relative
+  min-width: 100%
+  width: 100%
+
+.wrapper
+  display: flex
+  flex-direction: column
+  height: 100%
+  
+.content
+  flex: 1 0 auto
+
+footer
+  flex: 0 0 auto
+  padding: 20px
+
+
+.picture-bar-global .picture-bar-article h2
+  margin: 40px auto
+  width: 500px
+  color: #ffffff
+  text-align: center
+  font-size: 36px
+  font-family: droidserif-regular
+
+.picture-bar-global .picture-bar-article p
+  margin: 60px auto
+  color: #cbcbcb
+  width: 700px
+  text-align: center
+  font-size: 16px
+  line-height: 24px
+  font-family: open-sans-light
+
+
+
+
+
+//SCROLL BUTTON
