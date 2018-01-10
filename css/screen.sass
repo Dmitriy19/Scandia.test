@@ -4,7 +4,7 @@
 @import "scroll-down.css"
 @import "winston.css"
 @import "wobble-vertical.css"
-//@import "menu.css"
+@import "menu.css"
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -236,7 +236,8 @@ header
 .yellow-text
   color: #ffdb18
 
-
+.download-description-text p
+  color: #cbcbcb
 
 .download-description-text
   padding: 5px
@@ -353,7 +354,7 @@ header
 .picture-bar-hover:before
   position: absolute
   left: 50%
-  //width: 50%
+  width: 50%
   //height: 100%
   overflow: hidden
   content: ''
@@ -482,7 +483,6 @@ footer
   flex: 0 0 auto
   padding: 20px
 
-
 .picture-bar-global .picture-bar-article h2
   margin: 40px auto
   width: 500px
@@ -500,8 +500,26 @@ footer
   line-height: 24px
   font-family: open-sans-light
 
+//.picture-bar-global
+  display: -moz-inline-box
+  display: inline-block
+  vertical-align: middle
+  zoom: 1
 
+//.picture-bar-global .container
+  display: -moz-inline-box
+  display: inline-block
+  vertical-align: middle
+  height: 100%
+  width: 0px
+  zoom: 1
 
-
+//.helper
+  display: -moz-inline-box
+  display: inline-block
+  vertical-align: middle
+  height: 100%
+  width: 0px
+  zoom: 1
 
 //SCROLL BUTTON

@@ -1,134 +1,194 @@
-
-
-
-
-
-.close-button {
+.navBurger {
+  position: fixed;
+  right: 20px;
+  top: 20px;
   cursor: pointer;
-}
-
-#hamburger-open {
-  z-index: 1;
-  position: relative;
-  margin-left: 75%;
-  margin-top: 2%;
+  background: white;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: content-box;
   width: 30px;
-  height: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  height: 24px;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
-
-.spans {
-  width: 100%;
-  height: 10%;
-  background-color: #111820;
-  border-radius: 500px;
-  opacity: 1;
-  transition-property: background-color, transform, opacity;
-  transition-duration: 0.5s;
-  transition-delay: 0.5s;
-}
-
-.white {
-  background-color: #f5f5f5;
-  transition-duration: 0.5s;
-  transition-delay: none;
-}
-
-.spanOneRotate {
-  transform: translateY(9px) rotate(-45deg);
-  transition-property: background-color, transform;
-  transition-duration: 0.5s;
-  transition-delay: 0.5s;
-}
-
-.spanTwoRotate {
-  transform: rotate(45deg);
-  transition-property: background-color, transform;
-  transition-duration: 0.5s;
-  transition-delay: 0.5s;
-}
-
-.spanThreeHide {
-  transition-property: background-color, opacity;
-  opacity: 0;
-  transition-duration: 0.5s;
-  transition-delay: 0.5s;
-}
-
-.modal-menu {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 50vw;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: 0.5s;
-  transition-delay: 0s;
-}
-
-.menuitem {
-  position: relative;
-  font-family: "Karla", sans-serif;
-  font-weight: 100;
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-  color: #a5a5a5;
-  height: 75px;
-  transition-property: opacity;
-  transition-duration: 0.5s;
-  transition-delay: 0;
-}
-
-.menuitem:after {
+.navBurger:before, .navBurger:after {
   content: "";
   position: absolute;
+  background: white;
+  height: 2px;
   width: 100%;
-  top: 45%;
-  left: -6px;
-  background-color: #111820;
-  height: 1px;
-  z-index: -1;
-  transition-property: all;
-  transition-duration: 0.5s;
+  right: 0;
+  will-change: rotate;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.navBurger:before {
+  top: -10px;
+}
+.navBurger:after {
+  bottom: -10px;
+  width: 90%;
+}
+.navBurger.active {
+  background: transparent;
+  background-clip: content-box;
+}
+.navBurger.active:before {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  top: 0;
+  background: #eee;
+  width: 110%;
+}
+.navBurger.active:after {
+  bottom: 0;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  background: #eee;
+  width: 110%;
 }
 
-.menuitem:nth-of-type(1):hover:after {
-  background-color: #ff4338;
-  transform: scaleY(20) translateY(-60%);
+.overlay {
+  position: fixed;
+  background: #111111;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  visibility: hidden;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  overflow: hidden;
+}
+.overlay.open {
+  opacity: .99;
+  visibility: visible;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.overlay.open li {
+  display: block;
+  -webkit-animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+  animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s;
+  -webkit-transform: rotate(-7deg);
+  transform: rotate(-7deg);
+  -webkit-transform-origin: right bottom;
+  transform-origin: right bottom;
+}
+.overlay.open li:nth-of-type(2) {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+}
+.overlay.open li:nth-of-type(3) {
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s;
+}
+.overlay.open li:nth-of-type(4) {
+  -webkit-animation-delay: .7s;
+  animation-delay: .7s;
+}
+.overlay.open li:nth-of-type(5) {
+  -webkit-animation-delay: .8s;
+  animation-delay: .8s;
 }
 
-.menuitem:nth-of-type(2):hover:after {
-  background-color: #3cd52e;
-  transform: scaleY(20) translateY(-60%);
+.overlayMenu {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+ /* right: 35vw; */
+  bottom: 35vw;
+  
+}
+.overlayMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  height: 100%;
+}
+.overlayMenu ul li {
+  display: block;
+  position: relative;
+  opacity: 0;
+  width: 100%;
+}
+.overlayMenu ul li a {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px 40px 10px 40px;
+  margin: 5px 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+.overlayMenu ul li a:hover, .overlayMenu ul li a:active, .overlayMenu ul li a:focus {
+  background: red;
 }
 
-.menuitem:nth-of-type(3):hover:after {
-  background-color: #00b3e3;
-  transform: scaleY(20) translateY(-60%);
+.locked {
+  overflow: hidden;
 }
 
-.menuitem:nth-of-type(4):hover:after {
-  background-color: #ff4338;
-  transform: scaleY(20) translateY(-60%);
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 50px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
 }
 
-.menuitem:hover {
-  color: #f5f5f5;
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 50px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+html {
+  padding: 80px;
+  margin: 0;
+  background: #eee;
+  color: #222;
+  font-weight: 300;
+  font-family: 'Raleway';
 }
 
-.show {
-  opacity: 1;
-  transition-property: all;
-  transition-duration: 0.5s;
-  transition-delay: 1s;
+h1 {
+  font-size: 2rem;
+  color: #222;
+}
+
+p {
+  line-height: 40px;
+  font-size: 16px;
+  font-family: 'Crimson Text';
+  color: #222;
 }
