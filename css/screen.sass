@@ -251,6 +251,7 @@ header
 .button-guide
   padding: 5px
 
+
 .button-guide a
   display: block
   height: 50px
@@ -262,12 +263,13 @@ header
   font-family: droidserif-bold
   line-height: 50px
   color: black
-  -webkit-transition: all .1s ease-in-out
-  -o-transition: all .1s ease-in-out
-  transition: all .1s ease-in-out
+  -webkit-transition:  ease-out 0.2s
+  -moz-transition:  ease-out 0.2s
+  -o-transition:  ease-out 0.2s
+  transition:  ease-out 0.2s
   &:hover
     text-decoration: none
-    background: #e9c500
+    background: #ffc741
 
 .scroll-button-container
   position: relative
@@ -303,6 +305,7 @@ header
   justify-content: center
   align-items: center
   overflow: hidden
+  cursor: pointer
   background-repeat: no-repeat
   background-position: center center
   background-size: cover
@@ -319,11 +322,18 @@ header
 
 .clients-block
   width: 100%
-  min-height: 680px
-  background-color: #a3a5ab
+  min-height: 470px
+  background-color: #f4fffd
 
 .finding-great-block
+  position: relative
+  width: 100%
+  height: 780px
+  padding: 40px
   background-image: url("../img/finding-great.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
 
 .data-driven
   margin: 40px auto
@@ -384,11 +394,11 @@ header
   opacity: 4
   font-size: 14px
   font-family: OpenSansBold
+  opacity: 0
   -webkit-transition:  ease-out 0.4s
   -moz-transition:  ease-out 0.4s
   -o-transition:  ease-out 0.4s
   transition:  ease-out 0.4s
-  opacity: 0
 
 .link-bar a
   color: white
@@ -416,7 +426,19 @@ header
   margin: 0
   padding: 0
 
+.picture-bar-article p
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
 
+.link-bar a
+  -webkit-transition:  ease-out 0.2s
+  -moz-transition:  ease-out 0.2s
+  -o-transition:  ease-out 0.2s
+  transition:  ease-out 0.2s
+  &:hover
+    color: black
   //
 //picture-bar-hover (section)
   //
@@ -431,8 +453,12 @@ header
     -o-transform: rotate(-45deg)  /* Opera */
     -webkit-transform: rotate(-45deg)  /* Safari y Chrome */
 
-  .picture-bar-article h1
+  .picture-bar-article p
+    color: white
+
+  .picture-bar-article h2
     color: #fdd918
+
 
   .picture-bar-hover:before
     transform: rotate3d(0, 0, 1, 14deg)
@@ -499,6 +525,166 @@ footer
   font-size: 16px
   line-height: 24px
   font-family: open-sans-light
+
+//Client block section
+
+.clients-block h2
+  position: relative
+  width: 100%
+  padding: 85px 30px 45px 30px
+  text-align: center
+  font-family: open-sans-semibold
+  font-size: 30px
+
+
+
+.logo-company-1
+  background: url("../img/ourclients/nasb.png")
+.logo-company-2
+  background: url("../img/ourclients/verifone.png")
+.logo-company-3
+  background: url("../img/ourclients/bottomline.png")
+.logo-company-4
+  background: url("../img/ourclients/gleaner.png")
+.logo-company-5
+  background: url("../img/ourclients/technogel.png")
+.logo-company-6
+  background: url("../img/ourclients/nevalone.png")
+.logo-company-7
+  background: url("../img/ourclients/hca.png")
+.logo-company-8
+  background: url("../img/ourclients/iovation.png")
+.logo-company-9
+  background: url("../img/ourclients/lazard.png")
+.logo-company-10
+  background: url("../img/ourclients/unified-brands.png")
+.logo-company-11
+  background: url("../img/ourclients/barrett.png")
+.logo-company-12
+  background: url("../img/ourclients/zmags.png")
+.logo-company-13
+  background: url("../img/ourclients/duffy-shanley.png")
+.logo-company-14
+  background: url("../img/ourclients/navigant.png")
+.logo-company-15
+  background: url("../img/ourclients/foster-grant.png")
+.logo-company-16
+  background: url("../img/ourclients/lahey-hospital-and-medical-center.png")
+.logo-company-17
+  background: url("../img/ourclients/kenda.png")
+
+
+.clients-block-global
+  position: relative
+  max-width: 280px
+  min-height: 80px
+  margin: 0 auto
+  padding: 5px 5px
+  background-size: 120px auto
+  background-repeat: no-repeat
+  background-position: center center
+
+
+//Finding-great-block
+
+.main-guide-block .transparency
+  background-color: #000000
+  -moz-opacity: 0.5
+  opacity: 0.5
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0px
+  left: 0px
+  z-index: 0
+
+.finding-great-block h2
+  position: relative
+  width: 470px
+  margin: 0 auto
+  padding: 50px 10px
+  text-align: center
+  font-size: 30px
+  font-family: droidserif-regular
+  line-height: 40px
+  color: white
+  //line-height: centet
+
+.main-guide-block
+  position: relative
+  max-width: 520px
+  margin: 0 auto
+  //background: black
+  padding: 1px
+  overflow: hidden
+  //opacity: 0.5
+
+.main-guide-block h3
+  position: relative
+  width: 100%
+  padding: 60px 5px 0px 5px
+  text-align: center
+  font-size: 19px
+  font-family: droidserif-regular
+  color: white
+
+.main-guide-block p
+  position: relative
+  max-width: 640px
+  height: 100%
+  margin: 0 auto
+  padding: 30px 65px 150px 65px
+  text-align: center
+  font-size: 12px
+  font-family: open-sans-light
+  color: #a59a94
+  line-height: 20px
+
+
+.button-in-guide-block
+  position: absolute
+  bottom: 0
+  right: 160px
+  width: 200px
+  padding: 0 5px 50px 5px
+  z-index: 1
+
+
+//Plugin-section
+
+.plugin-section-main
+  position: relative
+  width: 100%
+  min-height: 350px
+
+
+
+
+footer
+  position: relative
+  width: 100%
+  min-height: 80px
+
+footer p
+  position: relative
+  min-width: 300px
+  max-width: 500px
+  float: left
+
+footer ul
+  position: relative
+  width: 400px
+  float: right
+
+footer ul li
+  display: inline
+
+
+
+
+
+  //background-size: 50px auto
+
 
 //.picture-bar-global
   display: -moz-inline-box

@@ -7045,7 +7045,7 @@ button:active .button-div:nth-child(1) {
 
 .overlay {
   position: fixed;
-  background: #111111;
+  background: #24292b;
   top: 0;
   right: 0;
   width: 100%;
@@ -7061,10 +7061,13 @@ button:active .button-div:nth-child(1) {
   overflow: hidden;
 }
 .overlay.open {
-  opacity: .99;
+  opacity: .95;
   visibility: visible;
   -webkit-transform: scale(1);
   transform: scale(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .overlay.open li {
   display: block;
@@ -7099,7 +7102,7 @@ button:active .button-div:nth-child(1) {
   width: 100%;
   text-align: center;
  /* right: 35vw; */
-  bottom: 35vw;
+ /* bottom: 35vw; */
   
 }
 .overlayMenu ul {
@@ -7118,17 +7121,25 @@ button:active .button-div:nth-child(1) {
 }
 .overlayMenu ul li a {
   display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  width: 100%;
+  padding: 25px 40px 25px 40px;
+  margin: 1px 0;
   color: #fff;
+  font-family: open-sans-regular;
+  font-size: 36px;
   text-decoration: none;
-  font-size: 30px;
-  padding: 10px 40px 10px 40px;
-  margin: 5px 0;
+  text-transform: uppercase;
   -webkit-transition: .2s;
   transition: .2s;
+  -webkit-transition:  ease-out 0.4s;
+  -moz-transition:  ease-out 0.4s;
+  -o-transition:  ease-out 0.4s;
+  transition:  ease-out 0.4s;
 }
 .overlayMenu ul li a:hover, .overlayMenu ul li a:active, .overlayMenu ul li a:focus {
-  background: red;
+  opacity: 0.99;
+  background: #fbd817;
+  color: black;
 }
 
 .locked {
@@ -7380,12 +7391,13 @@ header {
   font-family: droidserif-bold;
   line-height: 50px;
   color: black;
-  -webkit-transition: all .1s ease-in-out;
-  -o-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out; }
+  -webkit-transition: ease-out 0.2s;
+  -moz-transition: ease-out 0.2s;
+  -o-transition: ease-out 0.2s;
+  transition: ease-out 0.2s; }
   .button-guide a:hover {
     text-decoration: none;
-    background: #e9c500; }
+    background: #ffc741; }
 
 .scroll-button-container {
   position: relative;
@@ -7410,6 +7422,7 @@ header {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  cursor: pointer;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
@@ -7425,11 +7438,18 @@ header {
 
 .clients-block {
   width: 100%;
-  min-height: 680px;
-  background-color: #a3a5ab; }
+  min-height: 470px;
+  background-color: #f4fffd; }
 
 .finding-great-block {
-  background-image: url("../img/finding-great.jpg"); }
+  position: relative;
+  width: 100%;
+  height: 780px;
+  padding: 40px;
+  background-image: url("../img/finding-great.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
 
 .data-driven {
   margin: 40px auto;
@@ -7484,11 +7504,11 @@ header {
   opacity: 4;
   font-size: 14px;
   font-family: OpenSansBold;
+  opacity: 0;
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   -o-transition: ease-out 0.4s;
-  transition: ease-out 0.4s;
-  opacity: 0; }
+  transition: ease-out 0.4s; }
 
 .link-bar a {
   color: white;
@@ -7516,6 +7536,20 @@ header {
   margin: 0;
   padding: 0; }
 
+.picture-bar-article p {
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  -o-transition: ease-out 0.4s;
+  transition: ease-out 0.4s; }
+
+.link-bar a {
+  -webkit-transition: ease-out 0.2s;
+  -moz-transition: ease-out 0.2s;
+  -o-transition: ease-out 0.2s;
+  transition: ease-out 0.2s; }
+  .link-bar a:hover {
+    color: black; }
+
 .picture-bar-hover:hover .picture-bar-article {
   transform: translate(0, -50px); }
 
@@ -7524,7 +7558,10 @@ header {
   -o-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg); }
 
-.picture-bar-hover:hover .picture-bar-article h1 {
+.picture-bar-hover:hover .picture-bar-article p {
+  color: white; }
+
+.picture-bar-hover:hover .picture-bar-article h2 {
   color: #fdd918; }
 
 .picture-bar-hover:hover .picture-bar-hover:before {
@@ -7592,3 +7629,154 @@ footer {
   font-size: 16px;
   line-height: 24px;
   font-family: open-sans-light; }
+
+.clients-block h2 {
+  position: relative;
+  width: 100%;
+  padding: 85px 30px 45px 30px;
+  text-align: center;
+  font-family: open-sans-semibold;
+  font-size: 30px; }
+
+.logo-company-1 {
+  background: url("../img/ourclients/nasb.png"); }
+
+.logo-company-2 {
+  background: url("../img/ourclients/verifone.png"); }
+
+.logo-company-3 {
+  background: url("../img/ourclients/bottomline.png"); }
+
+.logo-company-4 {
+  background: url("../img/ourclients/gleaner.png"); }
+
+.logo-company-5 {
+  background: url("../img/ourclients/technogel.png"); }
+
+.logo-company-6 {
+  background: url("../img/ourclients/nevalone.png"); }
+
+.logo-company-7 {
+  background: url("../img/ourclients/hca.png"); }
+
+.logo-company-8 {
+  background: url("../img/ourclients/iovation.png"); }
+
+.logo-company-9 {
+  background: url("../img/ourclients/lazard.png"); }
+
+.logo-company-10 {
+  background: url("../img/ourclients/unified-brands.png"); }
+
+.logo-company-11 {
+  background: url("../img/ourclients/barrett.png"); }
+
+.logo-company-12 {
+  background: url("../img/ourclients/zmags.png"); }
+
+.logo-company-13 {
+  background: url("../img/ourclients/duffy-shanley.png"); }
+
+.logo-company-14 {
+  background: url("../img/ourclients/navigant.png"); }
+
+.logo-company-15 {
+  background: url("../img/ourclients/foster-grant.png"); }
+
+.logo-company-16 {
+  background: url("../img/ourclients/lahey-hospital-and-medical-center.png"); }
+
+.logo-company-17 {
+  background: url("../img/ourclients/kenda.png"); }
+
+.clients-block-global {
+  position: relative;
+  max-width: 280px;
+  min-height: 80px;
+  margin: 0 auto;
+  padding: 5px 5px;
+  background-size: 120px auto;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.main-guide-block .transparency {
+  background-color: #000000;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0; }
+
+.finding-great-block h2 {
+  position: relative;
+  width: 470px;
+  margin: 0 auto;
+  padding: 50px 10px;
+  text-align: center;
+  font-size: 30px;
+  font-family: droidserif-regular;
+  line-height: 40px;
+  color: white; }
+
+.main-guide-block {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 1px;
+  overflow: hidden; }
+
+.main-guide-block h3 {
+  position: relative;
+  width: 100%;
+  padding: 60px 5px 0px 5px;
+  text-align: center;
+  font-size: 19px;
+  font-family: droidserif-regular;
+  color: white; }
+
+.main-guide-block p {
+  position: relative;
+  max-width: 640px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 30px 65px 150px 65px;
+  text-align: center;
+  font-size: 12px;
+  font-family: open-sans-light;
+  color: #a59a94;
+  line-height: 20px; }
+
+.button-in-guide-block {
+  position: absolute;
+  bottom: 0;
+  right: 160px;
+  width: 200px;
+  padding: 0 5px 50px 5px;
+  z-index: 1; }
+
+.plugin-section-main {
+  position: relative;
+  width: 100%;
+  min-height: 350px; }
+
+footer {
+  position: relative;
+  width: 100%;
+  min-height: 80px; }
+
+footer p {
+  position: relative;
+  min-width: 300px;
+  max-width: 500px;
+  float: left; }
+
+footer ul {
+  position: relative;
+  width: 400px;
+  float: right; }
+
+footer ul li {
+  display: inline; }

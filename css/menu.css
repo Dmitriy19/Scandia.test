@@ -57,7 +57,7 @@
 
 .overlay {
   position: fixed;
-  background: #111111;
+  background: #24292b;
   top: 0;
   right: 0;
   width: 100%;
@@ -73,10 +73,13 @@
   overflow: hidden;
 }
 .overlay.open {
-  opacity: .99;
+  opacity: .95;
   visibility: visible;
   -webkit-transform: scale(1);
   transform: scale(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .overlay.open li {
   display: block;
@@ -111,7 +114,7 @@
   width: 100%;
   text-align: center;
  /* right: 35vw; */
-  bottom: 35vw;
+ /* bottom: 35vw; */
   
 }
 .overlayMenu ul {
@@ -130,17 +133,25 @@
 }
 .overlayMenu ul li a {
   display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  width: 100%;
+  padding: 25px 40px 25px 40px;
+  margin: 1px 0;
   color: #fff;
+  font-family: open-sans-regular;
+  font-size: 36px;
   text-decoration: none;
-  font-size: 30px;
-  padding: 10px 40px 10px 40px;
-  margin: 5px 0;
+  text-transform: uppercase;
   -webkit-transition: .2s;
   transition: .2s;
+  -webkit-transition:  ease-out 0.4s;
+  -moz-transition:  ease-out 0.4s;
+  -o-transition:  ease-out 0.4s;
+  transition:  ease-out 0.4s;
 }
 .overlayMenu ul li a:hover, .overlayMenu ul li a:active, .overlayMenu ul li a:focus {
-  background: red;
+  opacity: 0.99;
+  background: #fbd817;
+  color: black;
 }
 
 .locked {
