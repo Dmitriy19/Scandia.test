@@ -290,7 +290,10 @@ header
   text-align: center
 
 
-
+.wrapper-picture-bar
+  position: relative
+  width: 100%
+  min-height: 480px
 
 
 
@@ -305,7 +308,6 @@ header
   justify-content: center
   align-items: center
   overflow: hidden
-  cursor: pointer
   background-repeat: no-repeat
   background-position: center center
   background-size: cover
@@ -328,8 +330,9 @@ header
 .finding-great-block
   position: relative
   width: 100%
-  height: 780px
+  height: 820px
   padding: 40px
+  overflow: hidden
   background-image: url("../img/finding-great.jpg")
   background-repeat: no-repeat
   background-size: cover
@@ -383,13 +386,75 @@ header
   -o-transition:  ease-out 0.4s
   transition:  ease-out 0.4s
 
+.switch
+  position: absolute
+  bottom: 10px
+  right: -25px
+  width: 14px
+  height: 4px
+  background-color: #fff
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
 
+
+.switch:before
+  position: absolute
+  top: -3.5px
+  left: 6px
+  content: ""
+  display: block
+  width: 10px
+  height: 4px
+  background-color: #fff
+  -webkit-transform: rotate(45deg)
+  -moz-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  -o-transform: rotate(45deg)
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
+
+
+.switch:after
+  position: absolute
+  top: 2.5px
+  left: 6px
+  content: ""
+  display: block
+  width: 10px
+  height: 4px
+  background-color: #fff
+  -webkit-transform: rotate(135deg)
+  -moz-transform: rotate(135deg)
+  -ms-transform: rotate(135deg)
+  -o-transform: rotate(135deg)
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
+
+.link-bar
+  a:hover
+    .switch
+      background: black
+      transform: translate(30px, 4px)
+  a:hover
+    .switch::before
+      background: black
+    .switch::after
+      background: black
+
+.link-bar p
+  color: white
 
 .link-bar
   position: absolute
   right: 0
-  bottom: -60px
-  padding: 0 3% 0 0
+  bottom: -70px
+  padding: 1px 7% 1px 1px
   display: block
   opacity: 4
   font-size: 14px
@@ -401,7 +466,9 @@ header
   transition:  ease-out 0.4s
 
 .link-bar a
-  color: white
+  position: relative
+  display: block
+  padding: 1px
   text-transform: uppercase
   float: right
   opacity: 0
@@ -432,13 +499,26 @@ header
   -o-transition:  ease-out 0.4s
   transition:  ease-out 0.4s
 
-.link-bar a
+.link-bar p
+  position: relative
   -webkit-transition:  ease-out 0.2s
   -moz-transition:  ease-out 0.2s
   -o-transition:  ease-out 0.2s
   transition:  ease-out 0.2s
   &:hover
     color: black
+
+
+
+
+
+
+
+
+
+
+
+
   //
 //picture-bar-hover (section)
   //
@@ -469,8 +549,12 @@ header
     transform: translate(0px, -85px)
     opacity: 4
 
+  .switch
+    transform: translate(0px, 4px)
+
   .link-bar a
     opacity: 1
+
 
 .picture-bar-hover:hover.picture-bar-hover:before
   transform: rotate3d(0, 0, 1, 0deg)
@@ -507,7 +591,7 @@ figure.effect-winston a
 
 footer
   flex: 0 0 auto
-  padding: 20px
+  padding: 5px 10px
 
 .picture-bar-global .picture-bar-article h2
   margin: 40px auto
@@ -516,6 +600,11 @@ footer
   text-align: center
   font-size: 36px
   font-family: droidserif-regular
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
+
 
 .picture-bar-global .picture-bar-article p
   margin: 60px auto
@@ -533,7 +622,7 @@ footer
   width: 100%
   padding: 85px 30px 45px 30px
   text-align: center
-  font-family: open-sans-semibold
+  font-family: droidserif-regular
   font-size: 30px
 
 
@@ -588,9 +677,9 @@ footer
 //Finding-great-block
 
 .main-guide-block .transparency
-  background-color: #000000
-  -moz-opacity: 0.5
-  opacity: 0.5
+  background-color: #1a0b08
+  -moz-opacity: 0.76
+  opacity: 0.76
   width: 100%
   height: 100%
   position: absolute
@@ -602,7 +691,7 @@ footer
   position: relative
   width: 470px
   margin: 0 auto
-  padding: 50px 10px
+  padding: 60px 10px 50px 10px
   text-align: center
   font-size: 30px
   font-family: droidserif-regular
@@ -650,30 +739,57 @@ footer
   z-index: 1
 
 
+
 //Plugin-section
 
 .plugin-section-main
   position: relative
   width: 100%
-  min-height: 350px
+  min-height: 280px
+  display: flex
+  align-items: center
+  .container
+    margin-left: 0
+  .picture-left-block
+    position: relative
+    height: 218px
+    width: 20%
+    float: left
+    background: #c1c8cc
+  .special-options
+    padding-left: 0
+  .picture-section
+    position: relative
+    min-height: 290px
+    min-width: 290px
+    background-image: url("../img/scandia-bottom.png")
+    background-repeat: no-repeat
+    background-position: left center
+    background-size: 290px auto
+
+.global-plugin-options
+  position: relative
+  padding: 5px
+  min-height: 200px
+  background: pink
 
 
 
+//FOOTER SECTION
 
 footer
   position: relative
   width: 100%
-  min-height: 80px
-
-footer p
-  position: relative
-  min-width: 300px
-  max-width: 500px
-  float: left
+  min-height: 60px
+  p
+    position: relative
+    min-width: 300px
+    max-width: 500px
+    float: left
 
 footer ul
   position: relative
-  width: 400px
+  min-width: 420px
   float: right
 
 footer ul li
@@ -681,7 +797,34 @@ footer ul li
 
 
 
+.copy
+  position: relative
+  width: 100%
+  line-height: 5
+  p
+    font-size: 11px
+    font-family: open-sans-semibold
+    color: #9fa4ab
 
+
+
+.bottom-menu
+  position: relative
+  width: 100%
+  line-height: 3
+  a
+    font-size: 11px
+    font-family: open-sans-semibold
+    color: #9fa4ab
+    -webkit-transition:  ease-out 0.2s
+    -moz-transition:  ease-out 0.2s
+    -o-transition:  ease-out 0.2s
+    transition:  ease-out 0.2s
+    &:hover
+      color: #797e8b
+  li
+    float: right
+    padding: 5px 10px
 
   //background-size: 50px auto
 

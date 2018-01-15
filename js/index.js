@@ -7,4 +7,5 @@ $("#navToggle").click(function() {
 $('.overlay').click(function() {
     $(this).removeClass('open');
     $('.navBurger').removeClass('active');
+    $("body").removeClass("locked");
 });
