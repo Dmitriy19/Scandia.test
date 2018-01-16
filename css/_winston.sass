@@ -1,0 +1,27 @@
+.picture-bar-hover
+     -webkit-transition:  ease-out 0.2s
+     -moz-transition:  ease-out 0.2s
+     -o-transition:  ease-out 0.2s
+     transition:  ease-out 0.2s
+
+
+.picture-bar-hover section
+    -webkit-transition:  ease-out 0.3s
+    -moz-transition:  ease-out 0.3s
+    -o-transition:  ease-out 0.3s
+    transition:  ease-out 0.3s
+
+
+.picture-bar-hover::before
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-size: 100% 100%
+    -webkit-transition: opacity 0.45s, -webkit-transform 0.45s
+    transition: opacity 0.45s, transform 0.45s
+    -webkit-transform: rotate3d(0,0,1,45deg)
+    transform: rotate3d(0,0,1, 33deg)
+    -webkit-transform-origin: 0 100%
+    transform-origin: 0 100%

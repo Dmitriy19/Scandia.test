@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-//const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
 
@@ -11,16 +11,13 @@ const config = {
     },
 
     module:{
-
         rules: [
-
 
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: [ 'babel-loader' ]
             },
-
 
             /*{
              test: /(\.css|\.sass)$/,
@@ -60,7 +57,8 @@ const config = {
              },*/
 
             //Компиляция в screen.css.
-            /*{test: /\.sass$/,
+            {
+                test: /\.sass$/,
             use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
                          use: [{
@@ -81,7 +79,7 @@ const config = {
              }
              ]
              })
-             },*/
+             },
             /*{
              test: /\.sass$/,
              use: ExtractTextPlugin.extract({
@@ -90,10 +88,10 @@ const config = {
              })
              },*/
 
-            {
+            /*{
              test: /\.sass$/,
              use: [ 'style-loader', 'css-loader', 'sass-loader' ]
-             },
+             },*/
 
         {
                 test: /\.(png|jpg|gif)$/,
@@ -123,11 +121,7 @@ const config = {
         ]
     },
     plugins: [
-     new webpack.ProvidePlugin({
-     $: 'jquery',
-     jQuery: 'jquery'
-     }),
-        //new ExtractTextPlugin('screen.css')
+        new ExtractTextPlugin('screen.css')
         //if you want to pass in options, you can do so:
         //new ExtractTextPlugin({
         //  filename: 'screen.css'

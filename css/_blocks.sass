@@ -1,0 +1,897 @@
+//---MENU---//
+.navBurger
+  position: fixed
+  right: 20px
+  top: 20px
+  cursor: pointer
+  background: white
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  background-clip: content-box
+  width: 30px
+  height: 24px
+  border-top: 11px solid transparent
+  border-bottom: 11px solid transparent
+  -webkit-transform: rotate(0deg)
+  transform: rotate(0deg)
+  -webkit-transition: all 0.25s ease-in-out
+  transition: all 0.25s ease-in-out
+
+.navBurger:before, .navBurger:after
+  content: ""
+  position: absolute
+  background: white
+  height: 2px
+  width: 100%
+  right: 0
+  will-change: rotate
+  -webkit-transform: rotate(0deg)
+  transform: rotate(0deg)
+  -webkit-transition: all 0.5s ease
+  transition: all 0.5s ease
+
+.navBurger:before
+  top: -10px
+
+.navBurger:after
+  bottom: -10px
+  width: 50%
+
+.navBurger:hover::after
+  width: 100%
+
+.navBurger.active
+  background: transparent
+  background-clip: content-box
+
+.navBurger.active:before
+  -webkit-transform: rotate(135deg)
+  transform: rotate(135deg)
+  top: 0
+  background: #eee
+  width: 110%
+
+.navBurger.active:after
+  bottom: 0
+  -webkit-transform: rotate(-135deg)
+  transform: rotate(-135deg)
+  background: #eee
+  width: 110%
+
+
+.overlay
+  position: fixed
+  background: #24292b
+  top: 0
+  right: 0
+  width: 100%
+  height: 100%
+  opacity: 0
+  -webkit-transform-origin: right top
+  transform-origin: right top
+  -webkit-transform: scale(0)
+  transform: scale(0)
+  visibility: hidden
+  -webkit-transition: all .4s ease-in-out
+  transition: all .4s ease-in-out
+  overflow: hidden
+
+.overlay.open
+  opacity: .95
+  visibility: visible
+  -webkit-transform: scale(1)
+  transform: scale(1)
+  display: flex
+  justify-content: center
+  align-items: center
+
+.overlay.open li
+  display: block
+  -webkit-animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards
+  animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards
+  -webkit-animation-delay: .4s
+  animation-delay: .4s
+  -webkit-transform: rotate(-7deg)
+  transform: rotate(-7deg)
+  -webkit-transform-origin: right bottom
+  transform-origin: right bottom
+
+.overlay.open li:nth-of-type(2)
+  -webkit-animation-delay: .5s
+  animation-delay: .5s
+
+.overlay.open li:nth-of-type(3)
+  -webkit-animation-delay: .6s
+  animation-delay: .6s
+
+.overlay.open li:nth-of-type(4)
+  -webkit-animation-delay: .7s
+  animation-delay: .7s
+
+.overlay.open li:nth-of-type(5)
+  -webkit-animation-delay: .8s
+  animation-delay: .8s
+
+
+.overlayMenu
+  position: absolute
+  width: 100%
+  text-align: center
+
+
+.overlayMenu ul
+  list-style: none
+  padding: 0
+  margin: 0 auto
+  display: block
+  position: relative
+  height: 100%
+
+.overlayMenu ul li
+  display: block
+  position: relative
+  opacity: 0
+  width: 100%
+
+.overlayMenu ul li a
+  display: inline-block
+  width: 100%
+  padding: 25px 40px 25px 40px
+  margin: 1px 0
+  color: #fff
+  font-family: open-sans-regular
+  font-size: 36px
+  text-decoration: none
+  text-transform: uppercase
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
+
+.overlayMenu ul li a:hover, .overlayMenu ul li a:active, .overlayMenu ul li a:focus
+  opacity: 0.99
+  background: #fbd817
+  color: black
+  font-family: open-sans-semibold
+
+
+.locked
+  overflow: hidden
+
+
+@-webkit-keyframes fadeInRight
+  0%
+    opacity: 0
+    left: 50px
+
+  100%
+    opacity: 1
+    left: 0
+    -webkit-transform: rotate(0deg)
+    transform: rotate(0deg)
+
+
+
+@keyframes fadeInRight
+  0%
+    opacity: 0
+    left: 50px
+
+  100%
+    opacity: 1
+    left: 0
+    -webkit-transform: rotate(0deg)
+    transform: rotate(0deg)
+
+
+
+
+header
+  position: absolute
+  min-height: 100px
+  width: 100%
+  z-index: 22
+
+.menu-button
+  height: 28px
+  width: 30px
+  margin-top: 50px
+  margin-right: 40px
+  float: right
+  &:hover
+    background-position: -51px 0
+
+.main-picture
+  position: relative
+  width: 100%
+  height: 100vh
+  padding: 60px
+  overflow: hidden
+  background-image: url("../img/Main-picture.jpg")
+  background-repeat: no-repeat
+  background-position: top center
+  background-size: cover
+  .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+  .download-free-block-position
+    align-items: flex-end
+    justify-content: flex-end
+  .row
+    height: 100%
+  .container
+    height: 100%
+    width: 100%
+
+.main-logo-div
+  min-width: 360px
+
+.logo
+  position: relative
+  background-image: url("../img/logo.png")
+  background-repeat: no-repeat
+  background-size: auto 60px
+  width: 100%
+  height: 80px
+
+.logo-text
+  min-width: 280px
+  margin-top: 40px
+  position: relative
+  width: 100%
+  text-align: left
+  font-family: droidserif-regular
+  font-size: 40px
+  line-height: 56px
+  span
+    color: white
+
+// download-free-block
+
+.download-free-block
+  min-height: 32px
+  padding: 10px
+  float: right
+
+.main-download-block
+  padding-top: 5px
+  padding-bottom: 5px
+  a
+    width: 100%
+    color: white
+
+.icon-file-pdf
+  float: left
+  height: 66px
+  width: 52px
+  background-image: url("../img/icon-file-pdf.png")
+  background-repeat: no-repeat
+  background-position: center center
+  &hover
+    transform: translate(0px, -50px)
+
+.download-caption
+  max-width: 300px
+  font-size: 24px
+  overflow: hidden
+  line-height: 34px
+  padding: 10px 0 10px 0px
+  a
+    display: block
+
+.text-in-text-block
+  display: block
+  padding-left: 66px
+
+.yellow-text
+  color: #ffdb18
+
+.download-description-text
+  padding: 5px
+  margin: 0px 0px 16px 0px
+  width: 300px
+  color: #a3a5ab
+  font-size: 14px
+  font-family: open-sans-regular
+  line-height: 20px
+  p
+    color: #cbcbcb
+
+.button-guide
+  padding: 5px
+  a
+    display: block
+    height: 50px
+    width: 190px
+    background: #ffdb18
+    border-radius: 25px
+    font-size: 14px
+    text-align: center
+    font-family: droidserif-bold
+    line-height: 50px
+    color: black
+    -webkit-transition:  ease-out 0.2s
+    -moz-transition:  ease-out 0.2s
+    -o-transition:  ease-out 0.2s
+    transition:  ease-out 0.2s
+    &:hover
+      text-decoration: none
+      background: #ffc741
+
+.scroll-button-container
+  position: relative
+  width: 100%
+  height: 100%
+
+.scroll-button
+  width: 40px
+  margin: 0 auto
+
+.font
+  text-align: center
+
+.wrapper-picture-bar
+  position: relative
+  width: 100%
+  min-height: 480px
+
+.picture-bar-1
+  background-image: url("../img/picture-bar-1.jpg")
+.picture-bar-2
+  background-image: url("../img/picture-bar-2.jpg")
+.picture-bar-3
+  background-image: url("../img/picture-bar-3.jpg")
+
+.clients-block
+  width: 100%
+  min-height: 470px
+  background-color: #f4fffd
+  h2
+    position: relative
+    width: 100%
+    padding: 85px 30px 45px 30px
+    text-align: center
+    font-family: droidserif-regular
+    font-size: 30px
+
+
+.finding-great-block
+  position: relative
+  width: 100%
+  height: 820px
+  padding: 40px
+  overflow: hidden
+  background-image: url("../img/finding-great.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  h2
+    position: relative
+    width: 470px
+    margin: 0 auto
+    padding: 60px 10px 50px 10px
+    text-align: center
+    font-size: 30px
+    font-family: droidserif-regular
+    line-height: 40px
+    color: white
+
+.data-driven
+  margin: 40px auto
+  width: 500px
+  color: #ffffff
+  text-align: center
+  font-size: 36px
+  font-family: droidserif-regular
+  h1
+    -webkit-transition:  ease-out 0.4s
+    -moz-transition:  ease-out 0.4s
+    -o-transition:  ease-out 0.4s
+    transition:  ease-out 0.4s
+
+.description-data
+  margin: 60px auto
+  color: #cbcbcb
+  width: 700px
+  text-align: center
+  font-size: 16px
+  line-height: 24px
+  font-family: open-sans-light
+
+
+
+.picture-bar-hover:before
+  position: absolute
+  left: 50%
+  width: 50%
+  overflow: hidden
+  content: ''
+  width: 0
+  border-bottom: 260px solid #fdd918
+  border-left: 100vh solid transparent
+  -webkit-transition: opacity 0.45s, -webkit-transform 0.45s
+  transition: opacity 0.45s, transform 0.45s
+  -webkit-transform: rotate3d(0,0,1,45deg)
+  transform: rotate3d(0,0,1, 45deg)
+  -webkit-transform-origin: 0 100%
+  transform-origin: 0 100%
+  box-sizing: border-box
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
+
+.picture-bar-hover
+    -webkit-transition:  ease-out 0.2s
+    -moz-transition:  ease-out 0.2s
+    -o-transition:  ease-out 0.2s
+    transition:  ease-out 0.2s
+    section
+      -webkit-transition:  ease-out 0.3s
+      -moz-transition:  ease-out 0.3s
+      -o-transition:  ease-out 0.3s
+      transition:  ease-out 0.3s
+
+
+
+.switch
+  position: absolute
+  bottom: 10px
+  right: -25px
+  width: 14px
+  height: 4px
+  background-color: #fff
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
+
+.switch:before
+  position: absolute
+  top: -3.5px
+  left: 6px
+  content: ""
+  display: block
+  width: 10px
+  height: 4px
+  background-color: #fff
+  -webkit-transform: rotate(45deg)
+  -moz-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  -o-transform: rotate(45deg)
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
+
+.switch:after
+  position: absolute
+  top: 2.5px
+  left: 6px
+  content: ""
+  display: block
+  width: 10px
+  height: 4px
+  background-color: #fff
+  -webkit-transform: rotate(135deg)
+  -moz-transform: rotate(135deg)
+  -ms-transform: rotate(135deg)
+  -o-transform: rotate(135deg)
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
+
+.link-bar
+  position: absolute
+  right: 0
+  bottom: -70px
+  padding: 1px 7% 1px 1px
+  display: block
+  opacity: 4
+  font-size: 14px
+  font-family: OpenSansBold
+  opacity: 0
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
+  p
+    position: relative
+    -webkit-transition:  ease-out 0.2s
+    -moz-transition:  ease-out 0.2s
+    -o-transition:  ease-out 0.2s
+    transition:  ease-out 0.2s
+    &:hover
+      color: black
+  a
+    position: relative
+    display: block
+    padding: 1px
+    text-transform: uppercase
+    float: right
+    opacity: 0
+    -webkit-transition:  ease-out 0.4s
+    -moz-transition:  ease-out 0.4s
+    -o-transition:  ease-out 0.4s
+    transition:  ease-out 0.4s
+  a:hover
+    .switch
+      background: black
+      transform: translate(30px, 4px)
+  p
+    color: white
+
+  a:hover
+    .switch::before
+      background: black
+    .switch::after
+      background: black
+
+.picture-bar-article
+  -webkit-transition:  ease-out 0.4s
+  -moz-transition:  ease-out 0.4s
+  -o-transition:  ease-out 0.4s
+  transition:  ease-out 0.4s
+  h1
+    -webkit-transition:  ease-out 0.4s
+    -moz-transition:  ease-out 0.4s
+    -o-transition:  ease-out 0.4s
+    transition:  ease-out 0.4s
+  p
+    -webkit-transition:  ease-out 0.4s
+    -moz-transition:  ease-out 0.4s
+    -o-transition:  ease-out 0.4s
+    transition:  ease-out 0.4s
+
+
+
+.picture-bar-hover:hover
+  .picture-bar-article
+    transform: translate(0, -50px)
+
+  .picture-bar-hover-block
+    -moz-transform: rotate(-45deg)  /* Firefox */
+    -o-transform: rotate(-45deg)  /* Opera */
+    -webkit-transform: rotate(-45deg)  /* Safari y Chrome */
+
+  .picture-bar-article p
+    color: white
+
+  .picture-bar-article h2
+    color: #fdd918
+
+
+  .picture-bar-hover:before
+    transform: rotate3d(0, 0, 1, 14deg)
+    -webkit-transform: rotate3d(0,0,1, 14deg)
+    z-index: 9
+
+  .link-bar
+    transform: translate(0px, -85px)
+    opacity: 1
+    a
+      opacity: 1
+  .switch
+    transform: translate(0px, 4px)
+
+.picture-bar-hover:hover.picture-bar-hover:before
+  transform: rotate3d(0, 0, 1, 0deg)
+  -webkit-transform: rotate3d(0,0,1,0deg)
+  opacity: 0.6
+
+figure
+  .effect-winston p
+    position: absolute
+    right: 0
+    bottom: 0
+    padding: 0 1.5em 7% 0
+  .effect-winston a
+    margin: 0 10px
+    color: #5d504f
+    font-size: 170%
+
+.grid figure p
+  letter-spacing: 1px
+  font-size: 68.5%
+
+
+
+.plugin-section-main
+  position: relative
+  min-width: 100%
+  width: 100%
+
+.wrapper
+  display: flex
+  flex-direction: column
+  height: 100%
+
+.content
+  flex: 1 0 auto
+
+
+
+.picture-bar-global
+  position: relative
+  width: 100%
+  min-height: 480px
+  margin-left: auto
+  margin-right: auto
+  padding: 1px
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  .picture-bar-article
+    h2
+      margin: 40px auto
+      width: 500px
+      color: #ffffff
+      text-align: center
+      font-size: 36px
+      font-family: droidserif-regular
+      -webkit-transition:  ease-out 0.4s
+      -moz-transition:  ease-out 0.4s
+      -o-transition:  ease-out 0.4s
+      transition:  ease-out 0.4s
+    p
+      margin: 60px auto
+      color: #cbcbcb
+      width: 700px
+      text-align: center
+      font-size: 16px
+      line-height: 24px
+      font-family: open-sans-light
+  .container
+    margin: 0
+    padding: 0
+//Client block section
+
+
+.logo-company-1
+  background: url("../img/ourclients/nasb.png")
+.logo-company-2
+  background: url("../img/ourclients/verifone.png")
+.logo-company-3
+  background: url("../img/ourclients/bottomline.png")
+.logo-company-4
+  background: url("../img/ourclients/gleaner.png")
+.logo-company-5
+  background: url("../img/ourclients/technogel.png")
+.logo-company-6
+  background: url("../img/ourclients/nevalone.png")
+.logo-company-7
+  background: url("../img/ourclients/hca.png")
+.logo-company-8
+  background: url("../img/ourclients/iovation.png")
+.logo-company-9
+  background: url("../img/ourclients/lazard.png")
+.logo-company-10
+  background: url("../img/ourclients/unified-brands.png")
+.logo-company-11
+  background: url("../img/ourclients/barrett.png")
+.logo-company-12
+  background: url("../img/ourclients/zmags.png")
+.logo-company-13
+  background: url("../img/ourclients/duffy-shanley.png")
+.logo-company-14
+  background: url("../img/ourclients/navigant.png")
+.logo-company-15
+  background: url("../img/ourclients/foster-grant.png")
+.logo-company-16
+  background: url("../img/ourclients/lahey-hospital-and-medical-center.png")
+.logo-company-17
+  background: url("../img/ourclients/kenda.png")
+
+
+.clients-block-global
+  position: relative
+  max-width: 280px
+  min-height: 80px
+  margin: 0 auto
+  padding: 5px 5px
+  background-size: 120px auto
+  background-repeat: no-repeat
+  background-position: center center
+
+
+
+
+//line-height: centet
+
+.main-guide-block
+  position: relative
+  max-width: 520px
+  margin: 0 auto
+  padding: 1px
+  overflow: hidden
+  .transparency
+    background-color: #1a0b08
+    -moz-opacity: 0.76
+    opacity: 0.76
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 0
+  h3
+    position: relative
+    width: 100%
+    padding: 60px 5px 0px 5px
+    text-align: center
+    font-size: 19px
+    font-family: droidserif-regular
+    color: white
+  p
+    position: relative
+    max-width: 640px
+    height: 100%
+    margin: 0 auto
+    padding: 30px 65px 150px 65px
+    text-align: center
+    font-size: 12px
+    font-family: open-sans-light
+    color: #a59a94
+    line-height: 20px
+
+
+.button-in-guide-block
+  position: absolute
+  bottom: 0
+  right: 160px
+  width: 200px
+  padding: 0 5px 50px 5px
+  z-index: 1
+
+
+
+//Plugin-section
+
+.plugin-section-main
+  position: relative
+  width: 100%
+  min-height: 280px
+  display: flex
+  align-items: center
+  .container
+    margin-left: 0
+  .picture-left-block
+    position: relative
+    height: 218px
+    width: 20%
+    float: left
+    background: #c1c8cc
+  .special-options
+    padding-left: 0
+  .picture-section
+    position: relative
+    min-height: 290px
+    min-width: 290px
+    background-image: url("../img/scandia-bottom.png")
+    background-repeat: no-repeat
+    background-position: left center
+    background-size: 290px auto
+
+.global-plugin-options
+  position: relative
+  padding: 5px
+  min-height: 200px
+  background: pink
+
+
+
+//FOOTER SECTION
+
+footer
+  position: relative
+  width: 100%
+  min-height: 60px
+  padding: 5px 10px
+  flex: 0 0 auto
+  p
+    position: relative
+    min-width: 300px
+    max-width: 500px
+    float: left
+  ul
+    position: relative
+    min-width: 420px
+    float: right
+    display: inline
+  li
+    display: inline
+
+.copy
+  position: relative
+  width: 100%
+  line-height: 5
+  p
+    font-size: 11px
+    font-family: open-sans-semibold
+    color: #9fa4ab
+
+.bottom-menu
+  position: relative
+  width: 100%
+  line-height: 3
+  a
+    font-size: 11px
+    font-family: open-sans-semibold
+    color: #9fa4ab
+    -webkit-transition:  ease-out 0.2s
+    -moz-transition:  ease-out 0.2s
+    -o-transition:  ease-out 0.2s
+    transition:  ease-out 0.2s
+    &:hover
+      color: #797e8b
+  li
+    float: right
+    padding: 5px 10px
+
+section.ok
+  background-color: #555
+
+
+.scroll-down
+  opacity: 1
+  -webkit-transition: all .5s ease-in 3s
+  transition: all .5s ease-in 3s
+
+
+.scroll-down
+  position: absolute
+
+  left: 50%
+  display: block
+  width: 32px
+  height: 32px
+  border: 2px solid #FFF
+  background-size: 14px auto
+  border-radius: 50%
+  z-index: 2
+  -webkit-animation: bounce 2s infinite 2s
+  animation: bounce 2s infinite 2s
+  -webkit-transition: all .2s ease-in
+  transition: all .2s ease-in
+
+
+.scroll-down:before
+  position: absolute
+  top: calc(50% - 8px)
+  left: calc(50% - 6px)
+  transform: rotate(-45deg)
+  display: block
+  width: 12px
+  height: 12px
+  content: ""
+  border: 2px solid white
+  border-width: 0px 0 2px 2px
+
+
+@keyframes bounce
+  0%,
+  100%,
+  20%,
+  50%,
+  80%
+    -webkit-transform: translateY(0)
+    -ms-transform: translateY(0)
+    transform: translateY(0)
+
+  40%
+    -webkit-transform: translateY(-10px)
+    -ms-transform: translateY(-10px)
+    transform: translateY(-10px)
+
+  60%
+    -webkit-transform: translateY(-5px)
+    -ms-transform: translateY(-5px)
+    transform: translateY(-5px)
+
