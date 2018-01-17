@@ -5,16 +5,13 @@
   top: 20px
   cursor: pointer
   background: white
-  -webkit-box-sizing: border-box
   box-sizing: border-box
   background-clip: content-box
   width: 30px
   height: 24px
   border-top: 11px solid transparent
   border-bottom: 11px solid transparent
-  -webkit-transform: rotate(0deg)
   transform: rotate(0deg)
-  -webkit-transition: all 0.25s ease-in-out
   transition: all 0.25s ease-in-out
 
 .navBurger:before, .navBurger:after
@@ -25,9 +22,7 @@
   width: 100%
   right: 0
   will-change: rotate
-  -webkit-transform: rotate(0deg)
   transform: rotate(0deg)
-  -webkit-transition: all 0.5s ease
   transition: all 0.5s ease
 
 .navBurger:before
@@ -45,7 +40,7 @@
   background-clip: content-box
 
 .navBurger.active:before
-  -webkit-transform: rotate(135deg)
+
   transform: rotate(135deg)
   top: 0
   background: #eee
@@ -53,11 +48,9 @@
 
 .navBurger.active:after
   bottom: 0
-  -webkit-transform: rotate(-135deg)
   transform: rotate(-135deg)
   background: #eee
   width: 110%
-
 
 .overlay
   position: fixed
@@ -67,19 +60,15 @@
   width: 100%
   height: 100%
   opacity: 0
-  -webkit-transform-origin: right top
   transform-origin: right top
-  -webkit-transform: scale(0)
   transform: scale(0)
   visibility: hidden
-  -webkit-transition: all .4s ease-in-out
   transition: all .4s ease-in-out
   overflow: hidden
 
 .overlay.open
   opacity: .95
   visibility: visible
-  -webkit-transform: scale(1)
   transform: scale(1)
   display: flex
   justify-content: center
@@ -87,37 +76,27 @@
 
 .overlay.open li
   display: block
-  -webkit-animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards
   animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards
-  -webkit-animation-delay: .4s
   animation-delay: .4s
-  -webkit-transform: rotate(-7deg)
   transform: rotate(-7deg)
-  -webkit-transform-origin: right bottom
   transform-origin: right bottom
 
 .overlay.open li:nth-of-type(2)
-  -webkit-animation-delay: .5s
   animation-delay: .5s
 
 .overlay.open li:nth-of-type(3)
-  -webkit-animation-delay: .6s
   animation-delay: .6s
 
 .overlay.open li:nth-of-type(4)
-  -webkit-animation-delay: .7s
   animation-delay: .7s
 
 .overlay.open li:nth-of-type(5)
-  -webkit-animation-delay: .8s
   animation-delay: .8s
-
 
 .overlayMenu
   position: absolute
   width: 100%
   text-align: center
-
 
 .overlayMenu ul
   list-style: none
@@ -143,9 +122,6 @@
   font-size: 36px
   text-decoration: none
   text-transform: uppercase
-  -webkit-transition:  ease-out 0.4s
-  -moz-transition:  ease-out 0.4s
-  -o-transition:  ease-out 0.4s
   transition:  ease-out 0.4s
 
 .overlayMenu ul li a:hover, .overlayMenu ul li a:active, .overlayMenu ul li a:focus
@@ -167,7 +143,6 @@
   100%
     opacity: 1
     left: 0
-    -webkit-transform: rotate(0deg)
     transform: rotate(0deg)
 
 
@@ -180,17 +155,12 @@
   100%
     opacity: 1
     left: 0
-    -webkit-transform: rotate(0deg)
     transform: rotate(0deg)
 
 
 
 
-header
-  position: absolute
-  min-height: 100px
-  width: 100%
-  z-index: 22
+
 
 .menu-button
   height: 28px
@@ -312,9 +282,6 @@ header
     font-family: droidserif-bold
     line-height: 50px
     color: black
-    -webkit-transition:  ease-out 0.2s
-    -moz-transition:  ease-out 0.2s
-    -o-transition:  ease-out 0.2s
     transition:  ease-out 0.2s
     &:hover
       text-decoration: none
@@ -386,9 +353,6 @@ header
   font-size: 36px
   font-family: droidserif-regular
   h1
-    -webkit-transition:  ease-out 0.4s
-    -moz-transition:  ease-out 0.4s
-    -o-transition:  ease-out 0.4s
     transition:  ease-out 0.4s
 
 .description-data
@@ -400,41 +364,33 @@ header
   line-height: 24px
   font-family: open-sans-light
 
+.picture-bar-hover
+  transition:  ease-out 0.2s
+  section
+    transition:  ease-out 0.3s
 
 
 .picture-bar-hover:before
   position: absolute
   left: 50%
   width: 50%
+  height: 100%
   overflow: hidden
   content: ''
-  width: 0
   border-bottom: 260px solid #fdd918
   border-left: 100vh solid transparent
-  -webkit-transition: opacity 0.45s, -webkit-transform 0.45s
   transition: opacity 0.45s, transform 0.45s
-  -webkit-transform: rotate3d(0,0,1,45deg)
   transform: rotate3d(0,0,1, 45deg)
-  -webkit-transform-origin: 0 100%
   transform-origin: 0 100%
   box-sizing: border-box
-  -webkit-transition:  ease-out 0.4s
-  -moz-transition:  ease-out 0.4s
-  -o-transition:  ease-out 0.4s
   transition:  ease-out 0.4s
+  background-size: 100% 100%
+
 
 .picture-bar-hover
-    -webkit-transition:  ease-out 0.2s
-    -moz-transition:  ease-out 0.2s
-    -o-transition:  ease-out 0.2s
     transition:  ease-out 0.2s
     section
-      -webkit-transition:  ease-out 0.3s
-      -moz-transition:  ease-out 0.3s
-      -o-transition:  ease-out 0.3s
       transition:  ease-out 0.3s
-
-
 
 .switch
   position: absolute
@@ -443,10 +399,8 @@ header
   width: 14px
   height: 4px
   background-color: #fff
-  -webkit-transition:  ease-out 0.4s
-  -moz-transition:  ease-out 0.4s
-  -o-transition:  ease-out 0.4s
   transition:  ease-out 0.4s
+
 
 .switch:before
   position: absolute
@@ -457,13 +411,7 @@ header
   width: 10px
   height: 4px
   background-color: #fff
-  -webkit-transform: rotate(45deg)
-  -moz-transform: rotate(45deg)
-  -ms-transform: rotate(45deg)
-  -o-transform: rotate(45deg)
-  -webkit-transition:  ease-out 0.4s
-  -moz-transition:  ease-out 0.4s
-  -o-transition:  ease-out 0.4s
+  transform: rotate(45deg)
   transition:  ease-out 0.4s
 
 .switch:after
@@ -475,13 +423,7 @@ header
   width: 10px
   height: 4px
   background-color: #fff
-  -webkit-transform: rotate(135deg)
-  -moz-transform: rotate(135deg)
-  -ms-transform: rotate(135deg)
-  -o-transform: rotate(135deg)
-  -webkit-transition:  ease-out 0.4s
-  -moz-transition:  ease-out 0.4s
-  -o-transition:  ease-out 0.4s
+  transform: rotate(135deg)
   transition:  ease-out 0.4s
 
 .link-bar
@@ -494,15 +436,9 @@ header
   font-size: 14px
   font-family: OpenSansBold
   opacity: 0
-  -webkit-transition:  ease-out 0.4s
-  -moz-transition:  ease-out 0.4s
-  -o-transition:  ease-out 0.4s
   transition:  ease-out 0.4s
   p
     position: relative
-    -webkit-transition:  ease-out 0.2s
-    -moz-transition:  ease-out 0.2s
-    -o-transition:  ease-out 0.2s
     transition:  ease-out 0.2s
     &:hover
       color: black
@@ -513,9 +449,6 @@ header
     text-transform: uppercase
     float: right
     opacity: 0
-    -webkit-transition:  ease-out 0.4s
-    -moz-transition:  ease-out 0.4s
-    -o-transition:  ease-out 0.4s
     transition:  ease-out 0.4s
   a:hover
     .switch
@@ -531,19 +464,10 @@ header
       background: black
 
 .picture-bar-article
-  -webkit-transition:  ease-out 0.4s
-  -moz-transition:  ease-out 0.4s
-  -o-transition:  ease-out 0.4s
   transition:  ease-out 0.4s
   h1
-    -webkit-transition:  ease-out 0.4s
-    -moz-transition:  ease-out 0.4s
-    -o-transition:  ease-out 0.4s
     transition:  ease-out 0.4s
   p
-    -webkit-transition:  ease-out 0.4s
-    -moz-transition:  ease-out 0.4s
-    -o-transition:  ease-out 0.4s
     transition:  ease-out 0.4s
 
 
@@ -553,9 +477,7 @@ header
     transform: translate(0, -50px)
 
   .picture-bar-hover-block
-    -moz-transform: rotate(-45deg)  /* Firefox */
-    -o-transform: rotate(-45deg)  /* Opera */
-    -webkit-transform: rotate(-45deg)  /* Safari y Chrome */
+    transform: rotate(-45deg)
 
   .picture-bar-article p
     color: white
@@ -566,7 +488,6 @@ header
 
   .picture-bar-hover:before
     transform: rotate3d(0, 0, 1, 14deg)
-    -webkit-transform: rotate3d(0,0,1, 14deg)
     z-index: 9
 
   .link-bar
@@ -579,7 +500,6 @@ header
 
 .picture-bar-hover:hover.picture-bar-hover:before
   transform: rotate3d(0, 0, 1, 0deg)
-  -webkit-transform: rotate3d(0,0,1,0deg)
   opacity: 0.6
 
 figure
@@ -604,15 +524,6 @@ figure
   min-width: 100%
   width: 100%
 
-.wrapper
-  display: flex
-  flex-direction: column
-  height: 100%
-
-.content
-  flex: 1 0 auto
-
-
 
 .picture-bar-global
   position: relative
@@ -622,12 +533,15 @@ figure
   margin-right: auto
   padding: 1px
   display: flex
-  justify-content: center
-  align-items: center
   overflow: hidden
   background-repeat: no-repeat
   background-position: center center
   background-size: cover
+  a
+    display: flex
+    justify-content: stretch
+    width: 100%
+    align-items: center
   .picture-bar-article
     h2
       margin: 40px auto
@@ -636,9 +550,6 @@ figure
       text-align: center
       font-size: 36px
       font-family: droidserif-regular
-      -webkit-transition:  ease-out 0.4s
-      -moz-transition:  ease-out 0.4s
-      -o-transition:  ease-out 0.4s
       transition:  ease-out 0.4s
     p
       margin: 60px auto
@@ -649,6 +560,7 @@ figure
       line-height: 24px
       font-family: open-sans-light
   .container
+    width: 100%
     margin: 0
     padding: 0
 //Client block section
@@ -713,7 +625,6 @@ figure
   overflow: hidden
   .transparency
     background-color: #1a0b08
-    -moz-opacity: 0.76
     opacity: 0.76
     width: 100%
     height: 100%
@@ -787,26 +698,6 @@ figure
 
 
 
-//FOOTER SECTION
-
-footer
-  position: relative
-  width: 100%
-  min-height: 60px
-  padding: 5px 10px
-  flex: 0 0 auto
-  p
-    position: relative
-    min-width: 300px
-    max-width: 500px
-    float: left
-  ul
-    position: relative
-    min-width: 420px
-    float: right
-    display: inline
-  li
-    display: inline
 
 .copy
   position: relative
@@ -825,9 +716,6 @@ footer
     font-size: 11px
     font-family: open-sans-semibold
     color: #9fa4ab
-    -webkit-transition:  ease-out 0.2s
-    -moz-transition:  ease-out 0.2s
-    -o-transition:  ease-out 0.2s
     transition:  ease-out 0.2s
     &:hover
       color: #797e8b
@@ -841,13 +729,11 @@ section.ok
 
 .scroll-down
   opacity: 1
-  -webkit-transition: all .5s ease-in 3s
   transition: all .5s ease-in 3s
 
 
 .scroll-down
   position: absolute
-
   left: 50%
   display: block
   width: 32px
@@ -856,9 +742,7 @@ section.ok
   background-size: 14px auto
   border-radius: 50%
   z-index: 2
-  -webkit-animation: bounce 2s infinite 2s
   animation: bounce 2s infinite 2s
-  -webkit-transition: all .2s ease-in
   transition: all .2s ease-in
 
 
@@ -874,24 +758,16 @@ section.ok
   border: 2px solid white
   border-width: 0px 0 2px 2px
 
-
 @keyframes bounce
   0%,
   100%,
   20%,
   50%,
   80%
-    -webkit-transform: translateY(0)
-    -ms-transform: translateY(0)
     transform: translateY(0)
 
   40%
-    -webkit-transform: translateY(-10px)
-    -ms-transform: translateY(-10px)
     transform: translateY(-10px)
 
   60%
-    -webkit-transform: translateY(-5px)
-    -ms-transform: translateY(-5px)
     transform: translateY(-5px)
-

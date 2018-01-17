@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 const config = {
 
     entry: './js/app.js',
@@ -19,80 +18,38 @@ const config = {
                 use: [ 'babel-loader' ]
             },
 
-            /*{
-             test: /(\.css|\.sass)$/,
-             exclude: /node_modules/,
-             use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
-             fallback: 'style-loader',
-             // Could also be write as follow:
-             // use: 'css-loader?modules&importLoader=2&sourceMap&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader'
-             use: [
-             {
-             loader: 'css-loader',
-             query: {
-             modules: true,
-             sourceMap: true,
-             importLoaders: 2,
-             localIdentName: '[name]__[local]___[hash:base64:5]'
-             }
-             },
-             {
-             loader : 'sass-loader',
-             options: {
-             sourceMap: true
-             }
-             },
-             {
-             loader : 'postcss-loader',
-             options: {
-             plugins: function () {
-             return [
-             require("autoprefixer")
-             ];
-             }
-             }
-             }
-             ]
-             })),
-             },*/
-
             //Компиляция в screen.css.
             {
                 test: /\.sass$/,
-            use: ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-                         use: [{
-                         loader: 'css-loader',
-                         options: {
-             // If you are having trouble with urls not resolving add this setting.
-             // See https://github.com/webpack-contrib/css-loader#url
-             url: false,
-             minimize: false,
-             sourceMap: true
-             }
-             },
-             {
-             loader: 'sass-loader',
-             options: {
-             sourceMap: true
-             }
-             }
-             ]
-             })
-             },
-            /*{
-             test: /\.sass$/,
-             use: ExtractTextPlugin.extract({
-             fallback: 'style-loader',
-             use: ['css-loader', 'sass-loader']
-             })
-             },*/
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [{
+                        loader: 'css-loader',
+                        options: {
+                        // If you are having trouble with urls not resolving add this setting.
+                        // See https://github.com/webpack-contrib/css-loader#url
+                            url: false,
+                            minimize: false,
+                            sourceMap: true,
+                            importLoaders: 1
+                        }
+                    },
 
-            /*{
-             test: /\.sass$/,
-             use: [ 'style-loader', 'css-loader', 'sass-loader' ]
-             },*/
+                        {
+                            loader: 'postcss-loader'
+                        },
 
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        }
+
+
+                    ]
+                })
+             },
         {
                 test: /\.(png|jpg|gif)$/,
                 use: [
@@ -119,6 +76,7 @@ const config = {
 
 
         ]
+
     },
     plugins: [
         new ExtractTextPlugin('screen.css')

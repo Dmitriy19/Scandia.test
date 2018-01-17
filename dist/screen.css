@@ -4747,12 +4747,6 @@ a.thumbnail.active {
   to {
     background-position: 0 0; } }
 
-@-o-keyframes progress-bar-stripes {
-  from {
-    background-position: 40px 0; }
-  to {
-    background-position: 0 0; } }
-
 @keyframes progress-bar-stripes {
   from {
     background-position: 40px 0; }
@@ -4785,8 +4779,6 @@ a.thumbnail.active {
 
 .progress-striped .progress-bar,
 .progress-bar-striped {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   -webkit-background-size: 40px 40px;
     -webkit-background-size-background-size: 40px 40px; }
@@ -4801,32 +4793,24 @@ a.thumbnail.active {
   background-color: #5cb85c; }
 
 .progress-striped .progress-bar-success {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
 
 .progress-bar-info {
   background-color: #5bc0de; }
 
 .progress-striped .progress-bar-info {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
 
 .progress-bar-warning {
   background-color: #f0ad4e; }
 
 .progress-striped .progress-bar-warning {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
 
 .progress-bar-danger {
   background-color: #d9534f; }
 
 .progress-striped .progress-bar-danger {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
 
 .media {
@@ -5887,8 +5871,6 @@ button.close {
   opacity: .5; }
 
 .carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
@@ -5897,8 +5879,6 @@ button.close {
 .carousel-control.right {
   right: 0;
   left: auto;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
@@ -6263,8 +6243,6 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-
-/*# sourceMappingURL=bootstrap.css.map */
 /* WOBBLE VERTICAL */
 @-webkit-keyframes hvr-wobble-vertical {
   16.65% {
@@ -6311,7 +6289,8 @@ button.close {
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent; }
+  -webkit-box-shadow: 0 0 1px transparent;
+          box-shadow: 0 0 1px transparent; }
 
 .hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
   -webkit-animation-name: hvr-wobble-vertical;
@@ -6322,32 +6301,6 @@ button.close {
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1; }
-
-.picture-bar-hover {
-  -webkit-transition: ease-out 0.2s;
-  -moz-transition: ease-out 0.2s;
-  -o-transition: ease-out 0.2s;
-  transition: ease-out 0.2s; }
-
-.picture-bar-hover section {
-  -webkit-transition: ease-out 0.3s;
-  -moz-transition: ease-out 0.3s;
-  -o-transition: ease-out 0.3s;
-  transition: ease-out 0.3s; }
-
-.picture-bar-hover::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: 100% 100%;
-  -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
-  transition: opacity 0.45s, transform 0.45s;
-  -webkit-transform: rotate3d(0, 0, 1, 45deg);
-  transform: rotate3d(0, 0, 1, 33deg);
-  -webkit-transform-origin: 0 100%;
-  transform-origin: 0 100%; }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -6413,6 +6366,48 @@ q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none; }
 
+header {
+  position: absolute;
+  min-height: 100px;
+  width: 100%;
+  z-index: 22; }
+
+footer {
+  position: relative;
+  width: 100%;
+  min-height: 60px;
+  padding: 5px 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
+  footer p {
+    position: relative;
+    min-width: 300px;
+    max-width: 500px;
+    float: left; }
+  footer ul {
+    position: relative;
+    min-width: 420px;
+    float: right;
+    display: inline; }
+  footer li {
+    display: inline; }
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%; }
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
+
 .navBurger {
   position: fixed;
   right: 20px;
@@ -6420,14 +6415,14 @@ q:before, q:after, blockquote:before, blockquote:after {
   cursor: pointer;
   background: white;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   background-clip: content-box;
   width: 30px;
   height: 24px;
   border-top: 11px solid transparent;
   border-bottom: 11px solid transparent;
   -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
+          transform: rotate(0deg);
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out; }
 
@@ -6440,7 +6435,7 @@ q:before, q:after, blockquote:before, blockquote:after {
   right: 0;
   will-change: rotate;
   -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
+          transform: rotate(0deg);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
@@ -6460,7 +6455,7 @@ q:before, q:after, blockquote:before, blockquote:after {
 
 .navBurger.active:before {
   -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
+          transform: rotate(135deg);
   top: 0;
   background: #eee;
   width: 110%; }
@@ -6468,7 +6463,7 @@ q:before, q:after, blockquote:before, blockquote:after {
 .navBurger.active:after {
   bottom: 0;
   -webkit-transform: rotate(-135deg);
-  transform: rotate(-135deg);
+          transform: rotate(-135deg);
   background: #eee;
   width: 110%; }
 
@@ -6481,9 +6476,9 @@ q:before, q:after, blockquote:before, blockquote:after {
   height: 100%;
   opacity: 0;
   -webkit-transform-origin: right top;
-  transform-origin: right top;
+          transform-origin: right top;
   -webkit-transform: scale(0);
-  transform: scale(0);
+          transform: scale(0);
   visibility: hidden;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
@@ -6493,37 +6488,43 @@ q:before, q:after, blockquote:before, blockquote:after {
   opacity: .95;
   visibility: visible;
   -webkit-transform: scale(1);
-  transform: scale(1);
+          transform: scale(1);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .overlay.open li {
   display: block;
   -webkit-animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
-  animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+          animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
   -webkit-animation-delay: .4s;
-  animation-delay: .4s;
+          animation-delay: .4s;
   -webkit-transform: rotate(-7deg);
-  transform: rotate(-7deg);
+          transform: rotate(-7deg);
   -webkit-transform-origin: right bottom;
-  transform-origin: right bottom; }
+          transform-origin: right bottom; }
 
 .overlay.open li:nth-of-type(2) {
   -webkit-animation-delay: .5s;
-  animation-delay: .5s; }
+          animation-delay: .5s; }
 
 .overlay.open li:nth-of-type(3) {
   -webkit-animation-delay: .6s;
-  animation-delay: .6s; }
+          animation-delay: .6s; }
 
 .overlay.open li:nth-of-type(4) {
   -webkit-animation-delay: .7s;
-  animation-delay: .7s; }
+          animation-delay: .7s; }
 
 .overlay.open li:nth-of-type(5) {
   -webkit-animation-delay: .8s;
-  animation-delay: .8s; }
+          animation-delay: .8s; }
 
 .overlayMenu {
   position: absolute;
@@ -6555,8 +6556,6 @@ q:before, q:after, blockquote:before, blockquote:after {
   text-decoration: none;
   text-transform: uppercase;
   -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  -o-transition: ease-out 0.4s;
   transition: ease-out 0.4s; }
 
 .overlayMenu ul li a:hover, .overlayMenu ul li a:active, .overlayMenu ul li a:focus {
@@ -6576,7 +6575,7 @@ q:before, q:after, blockquote:before, blockquote:after {
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); } }
+            transform: rotate(0deg); } }
 
 @keyframes fadeInRight {
   0% {
@@ -6586,13 +6585,7 @@ q:before, q:after, blockquote:before, blockquote:after {
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); } }
-
-header {
-  position: absolute;
-  min-height: 100px;
-  width: 100%;
-  z-index: 22; }
+            transform: rotate(0deg); } }
 
 .menu-button {
   height: 28px;
@@ -6615,12 +6608,22 @@ header {
   background-size: cover; }
   .main-picture .col-xs-6, .main-picture .col-sm-6, .main-picture .col-md-6, .main-picture .col-lg-6 {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .main-picture .download-free-block-position {
-    align-items: flex-end;
-    justify-content: flex-end; }
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
   .main-picture .row {
     height: 100%; }
   .main-picture .container {
@@ -6670,7 +6673,8 @@ header {
   background-repeat: no-repeat;
   background-position: center center; }
   .icon-file-pdfhover {
-    transform: translate(0px, -50px); }
+    -webkit-transform: translate(0px, -50px);
+            transform: translate(0px, -50px); }
 
 .download-caption {
   max-width: 300px;
@@ -6713,8 +6717,6 @@ header {
     line-height: 50px;
     color: black;
     -webkit-transition: ease-out 0.2s;
-    -moz-transition: ease-out 0.2s;
-    -o-transition: ease-out 0.2s;
     transition: ease-out 0.2s; }
     .button-guide a:hover {
       text-decoration: none;
@@ -6788,8 +6790,6 @@ header {
   font-family: droidserif-regular; }
   .data-driven h1 {
     -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    -o-transition: ease-out 0.4s;
     transition: ease-out 0.4s; }
 
 .description-data {
@@ -6801,36 +6801,41 @@ header {
   line-height: 24px;
   font-family: open-sans-light; }
 
+.picture-bar-hover {
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s; }
+  .picture-bar-hover section {
+    -webkit-transition: ease-out 0.3s;
+    transition: ease-out 0.3s; }
+
 .picture-bar-hover:before {
   position: absolute;
   left: 50%;
   width: 50%;
+  height: 100%;
   overflow: hidden;
   content: '';
-  width: 0;
   border-bottom: 260px solid #fdd918;
   border-left: 100vh solid transparent;
   -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+  transition: opacity 0.45s, -webkit-transform 0.45s;
   transition: opacity 0.45s, transform 0.45s;
+  transition: opacity 0.45s, transform 0.45s, -webkit-transform 0.45s;
   -webkit-transform: rotate3d(0, 0, 1, 45deg);
-  transform: rotate3d(0, 0, 1, 45deg);
+          transform: rotate3d(0, 0, 1, 45deg);
   -webkit-transform-origin: 0 100%;
-  transform-origin: 0 100%;
-  box-sizing: border-box;
+          transform-origin: 0 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  -o-transition: ease-out 0.4s;
-  transition: ease-out 0.4s; }
+  transition: ease-out 0.4s;
+  background-size: 100% 100%; }
 
 .picture-bar-hover {
   -webkit-transition: ease-out 0.2s;
-  -moz-transition: ease-out 0.2s;
-  -o-transition: ease-out 0.2s;
   transition: ease-out 0.2s; }
   .picture-bar-hover section {
     -webkit-transition: ease-out 0.3s;
-    -moz-transition: ease-out 0.3s;
-    -o-transition: ease-out 0.3s;
     transition: ease-out 0.3s; }
 
 .switch {
@@ -6841,8 +6846,6 @@ header {
   height: 4px;
   background-color: #fff;
   -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  -o-transition: ease-out 0.4s;
   transition: ease-out 0.4s; }
 
 .switch:before {
@@ -6855,12 +6858,8 @@ header {
   height: 4px;
   background-color: #fff;
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+          transform: rotate(45deg);
   -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  -o-transition: ease-out 0.4s;
   transition: ease-out 0.4s; }
 
 .switch:after {
@@ -6873,12 +6872,8 @@ header {
   height: 4px;
   background-color: #fff;
   -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -ms-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
+          transform: rotate(135deg);
   -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  -o-transition: ease-out 0.4s;
   transition: ease-out 0.4s; }
 
 .link-bar {
@@ -6892,14 +6887,10 @@ header {
   font-family: OpenSansBold;
   opacity: 0;
   -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  -o-transition: ease-out 0.4s;
   transition: ease-out 0.4s; }
   .link-bar p {
     position: relative;
     -webkit-transition: ease-out 0.2s;
-    -moz-transition: ease-out 0.2s;
-    -o-transition: ease-out 0.2s;
     transition: ease-out 0.2s; }
     .link-bar p:hover {
       color: black; }
@@ -6911,12 +6902,11 @@ header {
     float: right;
     opacity: 0;
     -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    -o-transition: ease-out 0.4s;
     transition: ease-out 0.4s; }
   .link-bar a:hover .switch {
     background: black;
-    transform: translate(30px, 4px); }
+    -webkit-transform: translate(30px, 4px);
+            transform: translate(30px, 4px); }
   .link-bar p {
     color: white; }
   .link-bar a:hover .switch::before {
@@ -6926,27 +6916,21 @@ header {
 
 .picture-bar-article {
   -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  -o-transition: ease-out 0.4s;
   transition: ease-out 0.4s; }
   .picture-bar-article h1 {
     -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    -o-transition: ease-out 0.4s;
     transition: ease-out 0.4s; }
   .picture-bar-article p {
     -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    -o-transition: ease-out 0.4s;
     transition: ease-out 0.4s; }
 
 .picture-bar-hover:hover .picture-bar-article {
-  transform: translate(0, -50px); }
+  -webkit-transform: translate(0, -50px);
+          transform: translate(0, -50px); }
 
 .picture-bar-hover:hover .picture-bar-hover-block {
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg); }
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
 
 .picture-bar-hover:hover .picture-bar-article p {
   color: white; }
@@ -6955,22 +6939,24 @@ header {
   color: #fdd918; }
 
 .picture-bar-hover:hover .picture-bar-hover:before {
-  transform: rotate3d(0, 0, 1, 14deg);
   -webkit-transform: rotate3d(0, 0, 1, 14deg);
+          transform: rotate3d(0, 0, 1, 14deg);
   z-index: 9; }
 
 .picture-bar-hover:hover .link-bar {
-  transform: translate(0px, -85px);
+  -webkit-transform: translate(0px, -85px);
+          transform: translate(0px, -85px);
   opacity: 1; }
   .picture-bar-hover:hover .link-bar a {
     opacity: 1; }
 
 .picture-bar-hover:hover .switch {
-  transform: translate(0px, 4px); }
+  -webkit-transform: translate(0px, 4px);
+          transform: translate(0px, 4px); }
 
 .picture-bar-hover:hover.picture-bar-hover:before {
-  transform: rotate3d(0, 0, 1, 0deg);
   -webkit-transform: rotate3d(0, 0, 1, 0deg);
+          transform: rotate3d(0, 0, 1, 0deg);
   opacity: 0.6; }
 
 figure .effect-winston p {
@@ -6993,14 +6979,6 @@ figure .effect-winston a {
   min-width: 100%;
   width: 100%; }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%; }
-
-.content {
-  flex: 1 0 auto; }
-
 .picture-bar-global {
   position: relative;
   width: 100%;
@@ -7008,13 +6986,24 @@ figure .effect-winston a {
   margin-left: auto;
   margin-right: auto;
   padding: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
+  .picture-bar-global a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .picture-bar-global .picture-bar-article h2 {
     margin: 40px auto;
     width: 500px;
@@ -7023,8 +7012,6 @@ figure .effect-winston a {
     font-size: 36px;
     font-family: droidserif-regular;
     -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    -o-transition: ease-out 0.4s;
     transition: ease-out 0.4s; }
   .picture-bar-global .picture-bar-article p {
     margin: 60px auto;
@@ -7035,6 +7022,7 @@ figure .effect-winston a {
     line-height: 24px;
     font-family: open-sans-light; }
   .picture-bar-global .container {
+    width: 100%;
     margin: 0;
     padding: 0; }
 
@@ -7107,7 +7095,6 @@ figure .effect-winston a {
   overflow: hidden; }
   .main-guide-block .transparency {
     background-color: #1a0b08;
-    -moz-opacity: 0.76;
     opacity: 0.76;
     width: 100%;
     height: 100%;
@@ -7147,8 +7134,12 @@ figure .effect-winston a {
   position: relative;
   width: 100%;
   min-height: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .plugin-section-main .container {
     margin-left: 0; }
   .plugin-section-main .picture-left-block {
@@ -7174,25 +7165,6 @@ figure .effect-winston a {
   min-height: 200px;
   background: pink; }
 
-footer {
-  position: relative;
-  width: 100%;
-  min-height: 60px;
-  padding: 5px 10px;
-  flex: 0 0 auto; }
-  footer p {
-    position: relative;
-    min-width: 300px;
-    max-width: 500px;
-    float: left; }
-  footer ul {
-    position: relative;
-    min-width: 420px;
-    float: right;
-    display: inline; }
-  footer li {
-    display: inline; }
-
 .copy {
   position: relative;
   width: 100%;
@@ -7211,8 +7183,6 @@ footer {
     font-family: open-sans-semibold;
     color: #9fa4ab;
     -webkit-transition: ease-out 0.2s;
-    -moz-transition: ease-out 0.2s;
-    -o-transition: ease-out 0.2s;
     transition: ease-out 0.2s; }
     .bottom-menu a:hover {
       color: #797e8b; }
@@ -7239,7 +7209,7 @@ section.ok {
   border-radius: 50%;
   z-index: 2;
   -webkit-animation: bounce 2s infinite 2s;
-  animation: bounce 2s infinite 2s;
+          animation: bounce 2s infinite 2s;
   -webkit-transition: all .2s ease-in;
   transition: all .2s ease-in; }
 
@@ -7247,13 +7217,29 @@ section.ok {
   position: absolute;
   top: calc(50% - 8px);
   left: calc(50% - 6px);
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   display: block;
   width: 12px;
   height: 12px;
   content: "";
   border: 2px solid white;
   border-width: 0px 0 2px 2px; }
+
+@-webkit-keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  60% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px); } }
 
 @keyframes bounce {
   0%,
@@ -7262,13 +7248,10 @@ section.ok {
   50%,
   80% {
     -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0); }
+            transform: translateY(0); }
   40% {
     -webkit-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    transform: translateY(-10px); }
+            transform: translateY(-10px); }
   60% {
     -webkit-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    transform: translateY(-5px); } }
+            transform: translateY(-5px); } }
