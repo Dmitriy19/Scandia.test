@@ -1,4 +1,9 @@
 //---MENU---//
+.ie-fixe-menu
+  align-items: center
+  display: flex
+  min-height: 300px
+
 .navBurger
   position: fixed
   right: 20px
@@ -71,7 +76,7 @@
   visibility: visible
   transform: scale(1)
   display: flex
-  justify-content: center
+  flex-direction: row
   align-items: center
 
 .overlay.open li
@@ -156,11 +161,6 @@
     opacity: 1
     left: 0
     transform: rotate(0deg)
-
-
-
-
-
 
 .menu-button
   height: 28px
@@ -323,7 +323,6 @@
     font-family: droidserif-regular
     font-size: 30px
 
-
 .finding-great-block
   position: relative
   width: 100%
@@ -369,7 +368,6 @@
   section
     transition:  ease-out 0.3s
 
-
 .picture-bar-hover:before
   position: absolute
   left: 50%
@@ -386,7 +384,6 @@
   transition:  ease-out 0.4s
   background-size: 100% 100%
 
-
 .picture-bar-hover
     transition:  ease-out 0.2s
     section
@@ -400,7 +397,6 @@
   height: 4px
   background-color: #fff
   transition:  ease-out 0.4s
-
 
 .switch:before
   position: absolute
@@ -436,6 +432,7 @@
   font-size: 14px
   font-family: OpenSansBold
   opacity: 0
+  overflow: hidden
   transition:  ease-out 0.4s
   p
     position: relative
@@ -469,8 +466,6 @@
     transition:  ease-out 0.4s
   p
     transition:  ease-out 0.4s
-
-
 
 .picture-bar-hover:hover
   .picture-bar-article
@@ -517,13 +512,16 @@ figure
   letter-spacing: 1px
   font-size: 68.5%
 
-
-
 .plugin-section-main
   position: relative
   min-width: 100%
   width: 100%
 
+.ie-fixe
+  overflow: hidden
+  width: 100%
+  display: flex
+  flex-direction: row
 
 .picture-bar-global
   position: relative
@@ -531,17 +529,23 @@ figure
   min-height: 480px
   margin-left: auto
   margin-right: auto
-  padding: 1px
   display: flex
+  flex-direction: row
   overflow: hidden
   background-repeat: no-repeat
   background-position: center center
   background-size: cover
-  a
-    display: flex
-    justify-content: stretch
+  cursor: pointer
+  .row
     width: 100%
+    margin: 0
+  a
+    height: 100%
     align-items: center
+    display: flex
+    justify-content: center
+    flex-direction: column
+    width: 100%
   .picture-bar-article
     h2
       margin: 40px auto
@@ -613,8 +617,6 @@ figure
   background-position: center center
 
 
-
-
 //line-height: centet
 
 .main-guide-block
@@ -623,15 +625,7 @@ figure
   margin: 0 auto
   padding: 1px
   overflow: hidden
-  .transparency
-    background-color: #1a0b08
-    opacity: 0.76
-    width: 100%
-    height: 100%
-    position: absolute
-    top: 0
-    left: 0
-    z-index: 0
+  background: rgba(26, 11, 8, 0.68)
   h3
     position: relative
     width: 100%
@@ -645,22 +639,19 @@ figure
     max-width: 640px
     height: 100%
     margin: 0 auto
-    padding: 30px 65px 150px 65px
+    padding: 30px 65px 40px 65px
     text-align: center
     font-size: 12px
     font-family: open-sans-light
     color: #a59a94
     line-height: 20px
 
-
 .button-in-guide-block
-  position: absolute
-  bottom: 0
-  right: 160px
-  width: 200px
+  position: relative
   padding: 0 5px 50px 5px
   z-index: 1
-
+  a
+    margin: 0 auto
 
 
 //Plugin-section
@@ -695,9 +686,6 @@ figure
   padding: 5px
   min-height: 200px
   background: pink
-
-
-
 
 .copy
   position: relative
