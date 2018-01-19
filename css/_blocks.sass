@@ -285,7 +285,7 @@
     transition:  ease-out 0.2s
     &:hover
       text-decoration: none
-      background: #ffc741
+      background: #ff642f
 
 .scroll-button-container
   position: relative
@@ -608,7 +608,7 @@ figure
 
 .clients-block-global
   position: relative
-  max-width: 280px
+  max-width: 50%
   min-height: 80px
   margin: 0 auto
   padding: 5px 5px
@@ -666,26 +666,71 @@ figure
     margin-left: 0
   .picture-left-block
     position: relative
-    height: 218px
-    width: 20%
+    height: 199px
+    width: 6%
     float: left
-    background: #c1c8cc
   .special-options
     padding-left: 0
   .picture-section
     position: relative
-    min-height: 290px
+    min-height: 280px
     min-width: 290px
     background-image: url("../img/scandia-bottom.png")
     background-repeat: no-repeat
     background-position: left center
-    background-size: 290px auto
+    background-size: 265px auto
+
+.follow-us-section
+  .input-text
+    position: relative
+    padding: 5px 5px 20px 0
+    max-width: 300px
+    font-family: open-sans-semibold
+    font-size: 12px
+
+  .follow-us-section
+    position: relative
+    padding: 50px 5px 20px 0
+    max-width: 300px
+    font-family: open-sans-semibold
+    font-size: 12px
+
+  .go
+    position: absolute
+    top: 45px
+    right: 40px
+    color: #0074D9
+    font-family: droidserif-bold
+    font-size: 12px
+
+  input[type=text]
+    width: 170px
+    border: none
+    border-bottom: solid 1px black
+    padding-bottom: 8px
+    //color: rgba(0, 0, 0, 0.4)
+
+  input[placeholder]
+    font-size: 12px
+
+
+
+
+
+  *:focus
+    outline: none
 
 .global-plugin-options
   position: relative
   padding: 5px
   min-height: 200px
-  background: pink
+  //background: pink
+
+.global-class
+  display: flex
+  justify-content: center
+  align-items: center
+
 
 .copy
   position: relative
@@ -717,12 +762,11 @@ section.ok
 
 .scroll-down
   opacity: 1
+  -webkit-transition: all .5s ease-in 3s
   transition: all .5s ease-in 3s
 
 
 .scroll-down
-  position: absolute
-  left: 50%
   display: block
   width: 32px
   height: 32px
@@ -730,9 +774,10 @@ section.ok
   background-size: 14px auto
   border-radius: 50%
   z-index: 2
+  -webkit-animation: bounce 2s infinite 2s
   animation: bounce 2s infinite 2s
+  -webkit-transition: all .2s ease-in
   transition: all .2s ease-in
-
 
 .scroll-down:before
   position: absolute
@@ -745,17 +790,16 @@ section.ok
   content: ""
   border: 2px solid white
   border-width: 0px 0 2px 2px
+  
+.ok
+  position: absolute
+  bottom: -80px
+
 
 @keyframes bounce
-  0%,
-  100%,
-  20%,
-  50%,
-  80%
+  0%, 100%, 20%, 50%, 80%
     transform: translateY(0)
-
   40%
     transform: translateY(-10px)
-
   60%
     transform: translateY(-5px)

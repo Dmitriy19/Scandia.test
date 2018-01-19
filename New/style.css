@@ -1,16 +1,14 @@
 .main{
 	position: relative;
-	width: 300px;
+	width: 100%;
 	height: 150px;
 	margin: 300px auto
-    background: url(/hover-baner.png);
+    background: pinc;
+
 }
 
 
 
-.main::before:hover{
-	transform: rotate3d(0,0,1,45deg);
-}
 
 /*after:hover {
 	-o-transform: rotate(-30deg);
@@ -19,3 +17,5 @@
     -webkit-transform: rotate(-30deg);
     transform: rotate(-30deg);
 }*/
+
+

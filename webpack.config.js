@@ -36,7 +36,10 @@ const config = {
                     },
 
                         {
-                            loader: 'postcss-loader'
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: true
+                            }
                         },
 
                         {

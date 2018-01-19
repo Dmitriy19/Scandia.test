@@ -67,6 +67,14 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
+wow = new WOW({
+    boxClass: 'wow', // default
+    animateClass: 'animated', // default
+    offset: 0, // default
+    mobile: true, // default
+    live: true // default
+});
+wow.init();
 __webpack_require__(1);
 
 /***/ }),
