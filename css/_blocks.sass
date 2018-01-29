@@ -763,7 +763,7 @@ input[placeholder]
     color: #000000
 
   .region
-    padding-top: 90px
+    padding-top: 10px
     position: relative
     width: 100%
     font-size: 24px
@@ -775,7 +775,7 @@ input[placeholder]
   .postscript
     position: relative
     width: 100%
-    padding-top: 20px
+    padding-top: 12px
     font-size: 10px
     font-family: open-sans-regular
     transition: 0.4s
@@ -798,6 +798,8 @@ input[placeholder]
   height: 180px
   margin: 0 auto
 
+.jcgmt-clockHolder::before
+  transition: 0.4s
 
 .watch-1:before
   transition: 0.4s
@@ -842,7 +844,9 @@ input[placeholder]
     color: white
   .postscript
     color: #bbc2c6
-
+  .jcgmt-clockHolder::before
+    border: solid 2px white
+    background: black
 .watch-global-options:hover::before
   background: rgba(0,0,0,0.6)
 
