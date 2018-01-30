@@ -610,6 +610,7 @@ figure
 
 
 .clients-block-global
+  display: block
   position: relative
   max-width: 50%
   min-height: 80px
@@ -857,7 +858,7 @@ input[placeholder]
 .global-plugin-options
   position: relative
   width: 150px
-  min-height: 180px
+  height: 180px
   padding: 5px
   float: left
   //background: pink
@@ -957,3 +958,27 @@ section.ok
   color: #3b5998
 .fa-twitter:hover
   color: #00aced
+
+
+
+
+@media (max-device-width: 768px), (max-width: 991px)
+
+  .sia-free-block-position
+    align-items: flex-start
+
+  .logo
+    width: 580px
+    height: 100px
+    background-size: auto 104px
+
+  .logo-text
+    background-color: #ffa25d
+
+
+@media (max-device-width: 767px), (max-width: 767px)
+  .logo-text
+    background-color: red
+
+
+

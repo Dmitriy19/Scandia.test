@@ -24,6 +24,7 @@
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
+    "group-css-media-queries-loader": "^1.0.4",
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^11.0.0",
     "postcss-load-config": "^1.2.0",
