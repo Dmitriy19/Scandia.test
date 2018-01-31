@@ -8867,7 +8867,7 @@ footer {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-.ie-fixe-menu {
+.centering-menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -9065,7 +9065,7 @@ footer {
   .menu-button:hover {
     background-position: -51px 0; }
 
-.main-picture {
+.main-baner {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -9075,7 +9075,7 @@ footer {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover; }
-  .main-picture .col-xs-6, .main-picture .col-sm-6, .main-picture .col-md-6, .main-picture .col-lg-6 {
+  .main-baner .col-xs-6, .main-baner .col-sm-6, .main-baner .col-md-6, .main-baner .col-lg-6 {
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9086,16 +9086,16 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .main-picture .download-free-block-position {
+  .main-baner .download-free-block-position {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
-  .main-picture .row {
+  .main-baner .row {
     height: 100%; }
-  .main-picture .container {
+  .main-baner .container {
     height: 100%;
     width: 100%; }
 
@@ -9229,7 +9229,7 @@ footer {
     font-family: droidserif-regular;
     font-size: 30px; }
 
-.finding-great-block {
+.promo-block {
   position: relative;
   width: 100%;
   height: 820px;
@@ -9239,7 +9239,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; }
-  .finding-great-block h2 {
+  .promo-block h2 {
     position: relative;
     width: 470px;
     margin: 0 auto;
@@ -9449,7 +9449,7 @@ figure .effect-winston a {
   min-width: 100%;
   width: 100%; }
 
-.ie-fixe {
+.common-centering-bar {
   overflow: hidden;
   width: 100%;
   display: -webkit-box;
@@ -9918,16 +9918,91 @@ section.ok {
   color: #00aced; }
 
 @media (max-device-width: 768px), (max-width: 991px) {
-  .sia-free-block-position {
+  .navBurger {
+    right: 40px;
+    top: 60px; }
+  .main-baner .sia-free-block-position {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start; }
+  .main-logo-div {
+    margin-top: 100px; }
   .logo {
     width: 580px;
     height: 100px;
-    background-size: auto 104px; }
+    margin-left: 30px;
+    background-size: auto 86px; }
   .logo-text {
-    background-color: #ffa25d; } }
+    margin-left: 30px;
+    font-size: 48px; }
+  .download-free-block {
+    padding: 80px 20px 80px 20px;
+    max-width: 440px; }
+    .download-free-block p {
+      min-width: 310px;
+      max-width: 440px; }
+  .picture-bar-global {
+    background-size: 1900px auto; }
+    .picture-bar-global .picture-bar-article h2 {
+      font-size: 28px; }
+    .picture-bar-global .picture-bar-article p {
+      font-size: 16px;
+      width: 540px; }
+  .picture-bar-hover:before {
+    left: 2%; }
+  .picture-bar-hover:hover .link-bar {
+    bottom: -74px; }
+  .link-bar {
+    padding: 1px 12% 22px 1px;
+    font-size: 16px;
+    bottom: -110px; }
+  .top-footer .container:before {
+    background-color: white; }
+  .clients-block h2 {
+    padding: 100px 30px 45px 30px; }
+  .promo-block {
+    min-height: 920px;
+    padding: 70px 0; }
+    .promo-block h2 {
+      width: 520px;
+      font-size: 40px;
+      line-height: 52px; }
+  .main-guide-block {
+    max-width: 660px; }
+    .main-guide-block p {
+      font-size: 18px;
+      line-height: 30px;
+      padding: 40px 65px 40px 65px; }
+  .main-guide-block h3 {
+    width: 330px;
+    margin: 0 auto;
+    padding: 60px 5px 0px 5px;
+    font-size: 30px;
+    line-height: 46px; }
+  .top-footer-settings {
+    width: 100%; }
+  .centering-plugin-options {
+    width: 450px; }
+  .bottom-menu {
+    width: 100%;
+    margin: 0 auto; }
+    .bottom-menu li {
+      width: 20%; }
+    .bottom-menu ul {
+      width: 100%; }
+    .bottom-menu a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+      font-family: open-sans-regular; }
+  .top-footer .container {
+    border-bottom: none; }
+  .bottom-menu-options {
+    border-bottom: 1px solid #ccd3e1; }
+  .copy p {
+    width: 100%;
+    text-align: center; } }
 
 @media (max-device-width: 767px), (max-width: 767px) {
   .logo-text {

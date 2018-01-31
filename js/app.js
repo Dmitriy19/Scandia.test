@@ -1,3 +1,4 @@
+console.log(jQuery);
 wow = new WOW(
     {
         boxClass:     'wow',      // default
@@ -9,6 +10,12 @@ wow = new WOW(
 )
 wow.init();
 require('../css/screen.sass');
+
+console.log(require('./scroll-down.js'));
+console.log(require('./index.js'));
+
+//console.log(require('./jquery.rotate.js'));
+//console.log(require('./jClocksGMT.js'));
 
 
 

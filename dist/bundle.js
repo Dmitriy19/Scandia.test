@@ -67,6 +67,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
+console.log(jQuery);
 wow = new WOW({
     boxClass: 'wow', // default
     animateClass: 'animated', // default
@@ -77,11 +78,44 @@ wow = new WOW({
 wow.init();
 __webpack_require__(1);
 
+console.log(__webpack_require__(2));
+console.log(__webpack_require__(3));
+
+//console.log(require('./jquery.rotate.js'));
+//console.log(require('./jClocksGMT.js'));
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+$(function () {
+    $('.scroll-down').click(function () {
+        $('html, body').animate({ scrollTop: $('section.ok').offset().top }, 'slow');
+        return false;
+    });
+});
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+$("#navToggle").click(function () {
+    $(this).toggleClass("active");
+    $(".overlay").toggleClass("open");
+    // this line ▼ prevents content scroll-behind
+    $("body").toggleClass("locked");
+});
+$('.overlay').click(function () {
+    $(this).removeClass('open');
+    $('.navBurger').removeClass('active');
+    $("body").removeClass("locked");
+});
 
 /***/ })
 /******/ ]);
