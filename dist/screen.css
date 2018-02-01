@@ -9998,11 +9998,52 @@ section.ok {
       font-family: open-sans-regular; }
   .top-footer .container {
     border-bottom: none; }
-  .bottom-menu-options {
-    border-bottom: 1px solid #ccd3e1; }
+  .center-icons-section {
+    border-top: 1px solid #ccd3e1; }
   .copy p {
     width: 100%;
-    text-align: center; } }
+    text-align: center; }
+  .centering-plugin-options {
+    width: 100%; }
+  .global-plugin-options .region {
+    font-size: 36px; }
+  .global-plugin-options .postscript {
+    font-size: 14px; }
+  .top-footer .row {
+    padding: 50px 0 50px 0; }
+  .center-icons-section {
+    width: 100%;
+    height: 100%;
+    padding: 1px; }
+  .icons-section {
+    position: relative;
+    width: 220px;
+    padding-top: 60px;
+    margin: 0 auto;
+    float: none; }
+    .icons-section i {
+      padding: 0 22px 0 22px; }
+  .copy p {
+    font-size: 16px; }
+  .watch-global-options {
+    max-width: 768px; }
+  .centering-plugin-options {
+    width: 768px; }
+  .global-plugin-options {
+    width: 250px;
+    height: 280px; }
+  .watch-1 {
+    background-size: 250px auto; }
+  .watch-2 {
+    background-size: auto 280px; }
+  .watch-3 {
+    background-size: auto 280px; }
+  .jcgmt-container {
+    margin-top: 30px; }
+  .top-footer-settings .region {
+    padding-top: 16px; }
+  .top-footer-settings .postscript {
+    padding: 18px; } }
 
 @media (max-device-width: 767px), (max-width: 767px) {
   .logo-text {
