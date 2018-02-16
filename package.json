@@ -1,40 +1,56 @@
 {
-  "name": "webpack_app",
+  "name": "webpack-starter",
   "version": "1.0.0",
-  "description": "Sample webpack app",
-  "main": "app.js",
+  "description": "simple webpack config",
+  "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --entry ./js/app.js --output-filename ./dist/bundle.js",
-    "build": "webpack"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "npm install",
+    "build": "cross-env production=true webpack --config webpack.config.js --progress --colors",
+    "prestart": "npm install",
+    "start": "webpack-dev-server --colors --hot --progress"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeeSwagger/webpack-starter.git"
+  },
+  "keywords": [
+    "webpack",
+    "es5",
+    "babel",
+    "eslint"
+  ],
+  "author": "LeeSwagger",
   "license": "ISC",
-  "dependencies": {
-    "bable-loader": "0.0.1-security",
-    "font-loader": "^0.1.2",
-    "jquery": "^3.2.1",
-    "node-sass": "^4.7.2"
+  "bugs": {
+    "url": "https://github.com/LeeSwagger/webpack-starter/issues"
   },
+  "homepage": "https://github.com/LeeSwagger/webpack-starter#readme",
   "devDependencies": {
-    "animate.css": "^3.5.2",
-    "autoprefixer": "^7.2.5",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^6.4.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-remove-strict-mode": "0.0.2",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "^6.24.1",
-    "css-loader": "^0.28.0",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.28.5",
+    "exports-loader": "^0.7.0",
+    "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.5",
-    "group-css-media-queries-loader": "^1.0.4",
-    "postcss-cssnext": "^3.0.2",
-    "postcss-import": "^11.0.0",
-    "postcss-load-config": "^1.2.0",
-    "postcss-loader": "^2.0.10",
-    "postcss-plugin": "^1.0.0",
-    "precss": "^3.0.0",
-    "provide-always-loader": "^1.1.1",
+    "image-webpack-loader": "^3.4.2",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.3",
+    "resolve-url-loader": "^2.1.0",
     "sass-loader": "^6.0.6",
-    "style-loader": "^0.16.1",
-    "webpack": "^3.10.0",
-    "webpack-provide-global-plugin": "0.0.1"
+    "scrollreveal": "^3.3.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.4",
+    "webpack-dev-server": "^2.7.1",
+    "wow.js": "^1.2.2"
+  },
+  "dependencies": {
+    "postcss-loader": "^2.1.0",
+    "wowjs": "^1.1.3"
   }
 }

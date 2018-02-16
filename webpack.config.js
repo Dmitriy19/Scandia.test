@@ -1,93 +1,112 @@
+const path = require('path');
+const fs = require('fs');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const isDevelopment = !process.env.production;
+const assetsPath = path.join(__dirname, '/public');
+
+const extractSass = new ExtractTextPlugin({
+    filename: '[name].css',
+    disable: isDevelopment
+});
+
 const config = {
-
-    entry: './js/app.js',
-
-    output: {
-        path: __dirname + '/dist',
-        filename: 'bundle.js'
+    entry: {
+        main: './src/js/app.js'
     },
-
-    module:{
-        rules: [
-
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: [ 'babel-loader' ]
-            },
-
-            //Компиляция в screen.css.
-            {
-                test: /\.sass$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [{
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'public')
+    },
+    module: {
+        rules: [{
+            test: /\.js$/,
+            exclude: [/node_modules/],
+            use: [{
+                loader: 'babel-loader',
+                /*options: {
+                    presets: ['es2015']
+                }*/
+            }]
+        }, {
+            test: /\.sass$/,
+            exclude: [/node_modules/],
+            use: extractSass.extract({
+                fallback: 'style-loader',
+                //resolve-url-loader may be chained before sass-loader if necessary
+                use: [{
                         loader: 'css-loader',
                         options: {
-                        // If you are having trouble with urls not resolving add this setting.
-                        // See https://github.com/webpack-contrib/css-loader#url
-                            url: false,
-                            minimize: false,
-                            sourceMap: true,
-                            importLoaders: 1
+                            minimize: !isDevelopment
                         }
                     },
-
-                        {
-                            loader: 'postcss-loader',
-                            options: {
-                                sourceMap: true
-                            }
-                        },
-
-                        {
-                            loader: 'sass-loader',
-                            options: {
-                                sourceMap: true
-                            }
-                        }
-
-
-                    ]
-                })
-             },
-        {
-                test: /\.(png|jpg|gif)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[path][name].[ext]',
-                            context: ''
-                        }
-                    }
+                    "postcss-loader",
+                    'sass-loader',
+                    'resolve-url-loader'
                 ]
-            },
-
+            })
+        },
             {
-                test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: [{
+            test: /\.(gif|png|jpe?g|svg)$/i,
+            use: [{
                     loader: 'file-loader',
                     options: {
-                        name: '[path][name].[ext]',
-                        context: ''
+                        name: 'images/[name][hash].[ext]'
                     }
-                }]
-            }
-
-
-        ]
-
+                }, {
+                    loader: 'image-webpack-loader',
+                    options: {
+                        mozjpeg: {
+                            progressive: true,
+                            quality: 70
+                        }
+                    }
+                },
+            ],
+        }, {
+            test: /\.(eot|svg|ttf|woff|woff2)$/,
+            use: {
+                loader: 'file-loader',
+                options: {
+                    name: 'fonts/[name][hash].[ext]'
+                }
+            },
+        }]
     },
     plugins: [
-        new ExtractTextPlugin('screen.css')
-        //if you want to pass in options, you can do so:
-        //new ExtractTextPlugin({
-        //  filename: 'screen.css'
-        //})
-    ]
+        new webpack.ProvidePlugin({
+            _: 'lodash',
+            $: 'jquery',
+            jQuery: 'jQuery'
+        }),
+        extractSass
+    ],
+    devServer: {
+        contentBase: path.join(__dirname, 'public'),
+        compress: true,
+        port: 9000
+    }
 };
+
+if (isDevelopment) {
+    fs.readdirSync(assetsPath)
+        .map((fileName) => {
+            if (['.css', '.js'].includes(path.extname(fileName))) {
+                return fs.unlinkSync(`${assetsPath}/${fileName}`);
+            }
+            return '';
+        });
+} else {
+    config.plugins.push(
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false,
+                drop_console: true,
+                unsafe: true
+            }
+        })
+    );
+}
 
 module.exports = config;
