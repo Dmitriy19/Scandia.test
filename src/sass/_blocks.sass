@@ -993,7 +993,7 @@ section.ok
       max-width: 440px
 
   .picture-bar-global
-    background-size: 1900px auto
+    background-size: cover
     .picture-bar-article 
       h2
         font-size: 28px
@@ -1127,8 +1127,6 @@ section.ok
 
 @media (max-device-width: 767px), (max-width: 767px)
 
-
-
   .main-baner
     background: url("../../src/img/Main-picture-mob.jpg")
     background-repeat: no-repeat
@@ -1180,8 +1178,8 @@ section.ok
     margin: 0 auto
     color: white
     text-align: center
-    font-size: 26px
-    line-height: 40px
+    font-size: 18px
+    line-height: 25px
 
   .download-free-block
     margin: 0 auto
@@ -1195,16 +1193,16 @@ section.ok
     background-position: center center
 
   .text-in-text-block
-    width: 220px
-    padding: 2px
-    text-align: center
+    max-width: 220px
     margin: 0 auto
+    padding: 16px 20px
+    font-size: 18px
+    line-height: 25px
+    text-align: center
+
 
   .button-guide a
     margin: 0 auto
-
-  .text-in-text-block
-    padding: 16px 2px
 
   .download-caption
     margin: 0 auto
@@ -1221,19 +1219,26 @@ section.ok
     min-height: 350px
 
   .picture-bar-global .picture-bar-article
+
     h2
+      margin: 0 auto
       width: 100%
+      font-size: 24px
       text-align: left
+      line-height: 30px
 
     p
       width: 100%
+      margin-top: 20px
+      font-size: 14px
+      line-height: 20px
       text-align: left
 
   .mobile-height-2
-    min-height: 400px
+    min-height: 370px
 
   .mobile-height-3
-    min-height: 370px
+    min-height: 320px
 
   .switch
     bottom: 16px
@@ -1249,8 +1254,8 @@ section.ok
     padding:  2px
     width:  38px
     height:  35px
-    right: 65px
-    bottom: -140px
+    right: 20px
+    bottom: -145px
     transition: all 0.5s
 
   .switch-main:hover
@@ -1281,7 +1286,7 @@ section.ok
     opacity: 1
 
   .picture-bar-hover:hover.picture-bar-hover::before
-    transform: rotate3d(0, 0, 1, 5deg)
+    transform: rotate3d(0, 0, 1, 0deg)
 
   .navBurger
     position: absolute
@@ -1295,25 +1300,31 @@ section.ok
     top: 0px
 
   .promo-block h2
-    width: 100%
-    font-size: 28px
+    max-width: 260px
+    font-size: 24px
     line-height: 36px
     padding: 20px 10px 50px 10px
 
   .main-guide-block h3
-    font-size: 26px
+    max-width: 220px
+    padding-top: 40px
+    font-size: 18px
+    line-height: 26px
 
   .main-guide-block p
     padding: 30px 25px 80px 25px
-    font-size: 16px
-    line-height: 24px
+    font-size: 14px
+    line-height: 22px
 
   .promo-block
     min-height: 920px
 
-  .bottom-menu li
-    float: none
-    padding: 0
+  .bottom-menu
+    li
+      float: none
+      padding: 0
+    a
+      font-size: 14px
 
   .bottom-menu
     padding: 50px 0 30px 0
@@ -1329,3 +1340,21 @@ section.ok
 
   .copy p
     font-size: 14px
+
+  .picture-bar-hover:hover
+    .picture-bar-article
+      transform: translate(0, 0)
+
+  .picture-bar-1
+    min-height: 300px
+
+  .icons-section i
+    padding: 0 30px 0 30px
+    float: left
+
+  .copy p
+    font-size: 12px
+
+  .overlayMenu ul li a
+    font-size: 18px
+    padding: 12.5px 40px 12.5px 40px
